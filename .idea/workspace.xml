@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="eff3db11-78fa-40ca-8c05-ebc15269d269" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/JDK-1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/util/concurrent/CountDownLatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/util/concurrent/CountDownLatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/util/concurrent/locks/AbstractQueuedLongSynchronizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/util/concurrent/locks/AbstractQueuedLongSynchronizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/util/concurrent/locks/AbstractQueuedSynchronizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/util/concurrent/locks/AbstractQueuedSynchronizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/util/concurrent/locks/ReentrantLock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/util/concurrent/locks/ReentrantLock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/util/concurrent/locks/ReentrantReadWriteLock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/util/concurrent/locks/ReentrantReadWriteLock.java" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="ReentrantReadWriteLock.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/locks/ReentrantReadWriteLock.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="383" column="33" selection-start-line="383" selection-start-column="33" selection-end-line="383" selection-end-column="33" />
+              <folding>
+                <element signature="e#23632#23633#0" expanded="true" />
+                <element signature="e#23684#23685#0" expanded="true" />
+                <element signature="e#34966#34967#0" expanded="true" />
+                <element signature="e#35006#35007#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReentrantLock.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/locks/ReentrantLock.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="386">
+              <caret line="235" column="23" selection-start-line="235" selection-start-column="16" selection-end-line="235" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#27617#0" expanded="true" />
+                <element signature="e#5726#5727#0" expanded="true" />
+                <element signature="e#5778#5779#0" expanded="true" />
+                <element signature="e#5858#5859#0" expanded="true" />
+                <element signature="e#5939#5940#0" expanded="true" />
+                <element signature="e#5975#5976#0" expanded="true" />
+                <element signature="e#6042#6043#0" expanded="true" />
+                <element signature="e#6078#6079#0" expanded="true" />
+                <element signature="e#6124#6125#0" expanded="true" />
+                <element signature="e#7148#7149#0" expanded="true" />
+                <element signature="e#7206#7207#0" expanded="true" />
+                <element signature="e#8507#8508#0" expanded="true" />
+                <element signature="e#8547#8548#0" expanded="true" />
+                <element signature="e#8834#8835#0" expanded="true" />
+                <element signature="e#8898#8899#0" expanded="true" />
+                <element signature="e#9500#9501#0" expanded="true" />
+                <element signature="e#9527#9528#0" expanded="true" />
+                <element signature="e#12594#12595#0" expanded="true" />
+                <element signature="e#12642#12643#0" expanded="true" />
+                <element signature="e#17891#17892#0" expanded="true" />
+                <element signature="e#17933#17934#0" expanded="true" />
+                <element signature="e#18908#18909#0" expanded="true" />
+                <element signature="e#18950#18951#0" expanded="true" />
+                <element signature="e#20213#20214#0" expanded="true" />
+                <element signature="e#20260#20261#0" expanded="true" />
+                <element signature="e#20582#20583#0" expanded="true" />
+                <element signature="e#20620#20621#0" expanded="true" />
+                <element signature="e#20807#20808#0" expanded="true" />
+                <element signature="e#20854#20855#0" expanded="true" />
+                <element signature="e#21505#21506#0" expanded="true" />
+                <element signature="e#21543#21544#0" expanded="true" />
+                <element signature="e#22036#22037#0" expanded="true" />
+                <element signature="e#22082#22083#0" expanded="true" />
+                <element signature="e#22656#22657#0" expanded="true" />
+                <element signature="e#22700#22701#0" expanded="true" />
+                <element signature="e#23190#23191#0" expanded="true" />
+                <element signature="e#23234#23235#0" expanded="true" />
+                <element signature="e#23816#23817#0" expanded="true" />
+                <element signature="e#23862#23863#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractQueuedSynchronizer.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/locks/AbstractQueuedSynchronizer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="70">
+              <caret line="680" column="57" selection-start-line="680" selection-start-column="57" selection-end-line="680" selection-end-column="57" />
+              <folding>
+                <element signature="e#0#91128#0" expanded="true" />
+                <element signature="e#20926#20927#0" expanded="true" />
+                <element signature="e#20977#20978#0" expanded="true" />
+                <element signature="e#32479#32480#0" expanded="true" />
+                <element signature="e#32529#32530#0" expanded="true" />
+                <element signature="e#44242#44243#0" expanded="true" />
+                <element signature="e#44299#44300#0" expanded="true" />
+                <element signature="e#45397#45398#0" expanded="true" />
+                <element signature="e#45454#45455#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CountDownLatch.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/CountDownLatch.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="321" column="52" selection-start-line="321" selection-start-column="52" selection-end-line="321" selection-end-column="52" />
+              <folding>
+                <element signature="e#0#10581#0" expanded="true" />
+                <element signature="e#5496#5497#0" expanded="true" />
+                <element signature="e#5553#5554#0" expanded="true" />
+                <element signature="e#10398#10399#0" expanded="true" />
+                <element signature="e#10435#10436#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractQueuedLongSynchronizer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/locks/AbstractQueuedLongSynchronizer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="418" column="17" selection-start-line="418" selection-start-column="17" selection-end-line="418" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#81240#0" expanded="true" />
+                <element signature="e#22499#22500#0" expanded="true" />
+                <element signature="e#22549#22550#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Lock.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/locks/Lock.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-4556">
+              <folding>
+                <element signature="e#0#14222#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReadWriteLock.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/locks/ReadWriteLock.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1426">
+              <folding>
+                <element signature="e#0#4972#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>doAcquireInterruptibly</find>
+      <find>acquire(</find>
+      <find>acquireI</find>
+      <find>newcondi</find>
+      <find>ConditionObject</find>
+      <find>writelock</find>
+      <find>doreleaseShared</find>
+      <find>tryAcquireSharedNanos</find>
+      <find>unparkSuccessor</find>
+      <find>await()</find>
+      <find>acquireSharedInterruptibly(</find>
+      <find>releadse</find>
+      <find>releaseShared(</find>
+      <find>release</find>
+      <find>release(int arg)</find>
+      <find>dorelaseShared</find>
+      <find>tryAcquireShared(</find>
+      <find>tryAcquireShared</find>
+      <find>readerShouldBlock</find>
+      <find>acquireSharedInterruptibly</find>
+      <find>hasQueuedPredecessors</find>
+      <find>unlock</find>
+      <find>releaseShared</find>
+      <find>readerLock</find>
+      <find>lock(</find>
+      <find>writeLock</find>
+      <find>doReleaseShared</find>
+      <find>tryReleaseShared</find>
+      <find>release(</find>
+      <find>tryRelease</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/java/util/concurrent/locks/AbstractQueuedLongSynchronizer.java" />
+        <option value="$PROJECT_DIR$/src/java/util/concurrent/locks/ReentrantLock.java" />
+        <option value="$PROJECT_DIR$/src/java/util/concurrent/CountDownLatch.java" />
+        <option value="$PROJECT_DIR$/src/java/util/concurrent/locks/ReentrantReadWriteLock.java" />
+        <option value="$PROJECT_DIR$/src/java/util/concurrent/locks/AbstractQueuedSynchronizer.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$PROJECT_DIR$/../../apache-maven-3.3.3 2-test" />
+        <option name="userSettingsFile" value="$PROJECT_DIR$/../../apache-maven-3.3.3 2-test/conf/settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="816" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <autoscrollFromSource ProjectPane="true" />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="JDK-1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JDK-1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JDK-1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JDK-1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JDK-1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JDK-1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JDK-1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JDK-1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JDK-1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JDK-1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+              <item name="concurrent" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JDK-1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JDK-1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+              <item name="concurrent" type="462c0819:PsiDirectoryNode" />
+              <item name="locks" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="ReentrantReadWriteLock&#9;FILE&#9;file:///Users/hb/Documents/study/JDK-1/src/java/util/concurrent/locks/ReentrantReadWriteLock.java" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.other" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eff3db11-78fa-40ca-8c05-ebc15269d269" name="Default" comment="" />
+      <created>1525829202029</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1525829202029</updated>
+      <workItem from="1525829204046" duration="2919000" />
+      <workItem from="1525832536644" duration="1536000" />
+      <workItem from="1525917992652" duration="15520000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="19975000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1440" height="823" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="3" weight="0.3297568" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32880434" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="2" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22818312" />
+      <window_info anchor="bottom" id="Tail" order="7" />
+      <window_info anchor="right" id="Database" order="3" weight="0.3297568" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24964234" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+    </layout>
+    <layout-to-restore>
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Tail" order="8" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="bottom" id="Run" order="3" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24964234" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22818312" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info id="UI Designer" order="4" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info anchor="right" id="Database" order="6" weight="0.3297568" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32880434" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Messages" order="0" />
+      <window_info anchor="right" id="Maven Projects" order="8" weight="0.3297568" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/locks/ReentrantReadWriteLock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4290">
+          <caret line="325" column="25" selection-start-line="325" selection-start-column="25" selection-end-line="325" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/locks/ReentrantReadWriteLock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4875">
+          <caret line="325" column="25" selection-start-line="325" selection-start-column="25" selection-end-line="325" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/locks/Lock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4556">
+          <folding>
+            <element signature="e#0#14222#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/locks/AbstractQueuedLongSynchronizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="418" column="17" selection-start-line="418" selection-start-column="17" selection-end-line="418" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#81240#0" expanded="true" />
+            <element signature="e#22499#22500#0" expanded="true" />
+            <element signature="e#22549#22550#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/locks/ReadWriteLock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1426">
+          <folding>
+            <element signature="e#0#4972#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/CountDownLatch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="321" column="52" selection-start-line="321" selection-start-column="52" selection-end-line="321" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#10581#0" expanded="true" />
+            <element signature="e#5496#5497#0" expanded="true" />
+            <element signature="e#5553#5554#0" expanded="true" />
+            <element signature="e#10398#10399#0" expanded="true" />
+            <element signature="e#10435#10436#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/locks/ReentrantLock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="235" column="23" selection-start-line="235" selection-start-column="16" selection-end-line="235" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#27617#0" expanded="true" />
+            <element signature="e#5726#5727#0" expanded="true" />
+            <element signature="e#5778#5779#0" expanded="true" />
+            <element signature="e#5858#5859#0" expanded="true" />
+            <element signature="e#5939#5940#0" expanded="true" />
+            <element signature="e#5975#5976#0" expanded="true" />
+            <element signature="e#6042#6043#0" expanded="true" />
+            <element signature="e#6078#6079#0" expanded="true" />
+            <element signature="e#6124#6125#0" expanded="true" />
+            <element signature="e#7148#7149#0" expanded="true" />
+            <element signature="e#7206#7207#0" expanded="true" />
+            <element signature="e#8507#8508#0" expanded="true" />
+            <element signature="e#8547#8548#0" expanded="true" />
+            <element signature="e#8834#8835#0" expanded="true" />
+            <element signature="e#8898#8899#0" expanded="true" />
+            <element signature="e#9500#9501#0" expanded="true" />
+            <element signature="e#9527#9528#0" expanded="true" />
+            <element signature="e#12594#12595#0" expanded="true" />
+            <element signature="e#12642#12643#0" expanded="true" />
+            <element signature="e#17891#17892#0" expanded="true" />
+            <element signature="e#17933#17934#0" expanded="true" />
+            <element signature="e#18908#18909#0" expanded="true" />
+            <element signature="e#18950#18951#0" expanded="true" />
+            <element signature="e#20213#20214#0" expanded="true" />
+            <element signature="e#20260#20261#0" expanded="true" />
+            <element signature="e#20582#20583#0" expanded="true" />
+            <element signature="e#20620#20621#0" expanded="true" />
+            <element signature="e#20807#20808#0" expanded="true" />
+            <element signature="e#20854#20855#0" expanded="true" />
+            <element signature="e#21505#21506#0" expanded="true" />
+            <element signature="e#21543#21544#0" expanded="true" />
+            <element signature="e#22036#22037#0" expanded="true" />
+            <element signature="e#22082#22083#0" expanded="true" />
+            <element signature="e#22656#22657#0" expanded="true" />
+            <element signature="e#22700#22701#0" expanded="true" />
+            <element signature="e#23190#23191#0" expanded="true" />
+            <element signature="e#23234#23235#0" expanded="true" />
+            <element signature="e#23816#23817#0" expanded="true" />
+            <element signature="e#23862#23863#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/locks/ReentrantReadWriteLock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="383" column="33" selection-start-line="383" selection-start-column="33" selection-end-line="383" selection-end-column="33" />
+          <folding>
+            <element signature="e#23632#23633#0" expanded="true" />
+            <element signature="e#23684#23685#0" expanded="true" />
+            <element signature="e#34966#34967#0" expanded="true" />
+            <element signature="e#35006#35007#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/locks/AbstractQueuedSynchronizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="680" column="57" selection-start-line="680" selection-start-column="57" selection-end-line="680" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#91128#0" expanded="true" />
+            <element signature="e#20926#20927#0" expanded="true" />
+            <element signature="e#20977#20978#0" expanded="true" />
+            <element signature="e#32479#32480#0" expanded="true" />
+            <element signature="e#32529#32530#0" expanded="true" />
+            <element signature="e#44242#44243#0" expanded="true" />
+            <element signature="e#44299#44300#0" expanded="true" />
+            <element signature="e#45397#45398#0" expanded="true" />
+            <element signature="e#45454#45455#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArquillianSettingsConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

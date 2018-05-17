@@ -357,13 +357,15 @@ public abstract class AbstractQueuedLongSynchronizer
      * @param node the node to insert
      * @return node's predecessor
      */
+    //高并发下不断的尝试设置尾节点，
     private Node enq(final Node node) {
         for (;;) {
             Node t = tail;
+            //如果是第一次向队列添加节点，则head、tail都指向同一个节点
             if (t == null) { // Must initialize
                 if (compareAndSetHead(new Node()))
                     tail = head;
-            } else {
+            } else {//如果等待对列中已存在节点，则只需更新尾节点即可
                 node.prev = t;
                 if (compareAndSetTail(t, node)) {
                     t.next = node;
@@ -379,9 +381,15 @@ public abstract class AbstractQueuedLongSynchronizer
      * @param mode Node.EXCLUSIVE for exclusive, Node.SHARED for shared
      * @return the new node
      */
+    /***
+     * 线程加入等待队列
+     * @param mode
+     * @return
+     */
     private Node addWaiter(Node mode) {
         Node node = new Node(Thread.currentThread(), mode);
         // Try the fast path of enq; backup to full enq on failure
+        //如果队列尾节点不是空的，则cas更新尾节点为当前节点，则设置旧的尾节点为当前节点，成功设置尾节点，则返回该新的尾节点
         Node pred = tail;
         if (pred != null) {
             node.prev = pred;
@@ -418,8 +426,10 @@ public abstract class AbstractQueuedLongSynchronizer
          * to clear in anticipation of signalling.  It is OK if this
          * fails or if status is changed by waiting thread.
          */
+        //判断当前head头节点的状态，当前head头节点是已经执行完的节点
+        //如果头节点状态是小于0，则先设置为0
         int ws = node.waitStatus;
-        if (ws < 0)
+        if (ws < 0)//SIGNAL、CONDION、PROPAGATE都表示线程在等待中
             compareAndSetWaitStatus(node, ws, 0);
 
         /*
@@ -435,9 +445,10 @@ public abstract class AbstractQueuedLongSynchronizer
                 if (t.waitStatus <= 0)
                     s = t;
         }
+        //解除从head开始的第一个节点状态小于0的节点，并唤醒所属线程
         if (s != null)
-            LockSupport.unpark(s.thread);
-    }
+            LockSupport.unpark(s.thread);ø
+    }ø
 
     /**
      * Release action for shared mode -- signal successor and ensure
@@ -629,18 +640,33 @@ public abstract class AbstractQueuedLongSynchronizer
      * @param arg the acquire argument
      * @return {@code true} if interrupted while waiting
      */
+    /***
+     * 判断新增的尾节点是否需要被挂起
+     * @param node
+     * @param arg
+     * @return
+     */
     final boolean acquireQueued(final Node node, long arg) {
         boolean failed = true;
         try {
             boolean interrupted = false;
             for (;;) {
+                //获取当前尾节点的前一个节点
                 final Node p = node.predecessor();
+                //如果前一个节点是head节点，则表示当前新加入的节点是一个第一个节点(因为可能在你加入该队列的时候，原来的节点已经从队列处被移除并执行，此时你就是第一个节点了)
+                //如果是第一个节点，则尝试获得锁，如果获得锁成功，则不需要继续排队了
                 if (p == head && tryAcquire(arg)) {
                     setHead(node);
                     p.next = null; // help GC
                     failed = false;
                     return interrupted;
                 }
+                //如果当前锁不是第一个节点或者由于非公平没拿到锁，则继续等待刮起
+                //1、判断之前的节点的状态是否是SIGNAL（当锁被release的时候，只会从队列中解除SIGNAL状态的节点的挂起）
+                //   是：返回true
+                //   不是:判断状态是否大于0，是的话则被cancelled掉了，则将它从等待队列中移除，然后继续从队列向前找到一个没有被cancelled掉的节点，然后与这个节点的next和prev相互引用
+                        //这样下一次再调用shouldParkAfterFailedAcquire就会返回状态是SIGNAL
+                //2、parkAndCheckInterrupt会通过LockSupport.park挂起当前节点所属线程，并等待一个中断、unpark方法来唤醒它，通过这样FIFO实现了Lock的操作
                 if (shouldParkAfterFailedAcquire(p, node) &&
                     parkAndCheckInterrupt())
                     interrupted = true;
@@ -848,6 +874,11 @@ public abstract class AbstractQueuedLongSynchronizer
      *         correctly.
      * @throws UnsupportedOperationException if exclusive mode is not supported
      */
+    /***
+     * 查询获得独占锁，该方法必须检查锁的状态，以便允许它能获得独占锁
+     * @param arg
+     * @return
+     */
     protected boolean tryAcquire(long arg) {
         throw new UnsupportedOperationException();
     }
@@ -969,6 +1000,12 @@ public abstract class AbstractQueuedLongSynchronizer
      * @param arg the acquire argument.  This value is conveyed to
      *        {@link #tryAcquire} but is otherwise uninterpreted and
      *        can represent anything you like.
+     */
+    /***
+     *
+     * @param arg
+     * 1、查询获得独占锁失败  & 往等待队列末尾加入独占节点
+     * 2、不可中断
      */
     public final void acquire(long arg) {
         if (!tryAcquire(arg) &&

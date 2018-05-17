@@ -109,6 +109,9 @@ import java.util.concurrent.atomic.*;
 public class ReentrantLock implements Lock, java.io.Serializable {
     private static final long serialVersionUID = 7373984872572414699L;
     /** Synchronizer providing all implementation mechanics */
+    /***
+     * 持有AQS的一个子类的一个引用
+     */
     private final Sync sync;
 
     /**
@@ -130,16 +133,21 @@ public class ReentrantLock implements Lock, java.io.Serializable {
          * implemented in subclasses, but both need nonfair
          * try for trylock method.
          */
+        /***
+         * 非公平尝试获取独占锁的实现方式，lock是不会走这里的，如果没获得到锁则返回false
+         * @param acquires
+         * @return
+         */
         final boolean nonfairTryAcquire(int acquires) {
             final Thread current = Thread.currentThread();
-            int c = getState();
-            if (c == 0) {
+            int c = getState();//获取锁状态
+            if (c == 0) {//锁还未被占用
                 if (compareAndSetState(0, acquires)) {
                     setExclusiveOwnerThread(current);
                     return true;
                 }
             }
-            else if (current == getExclusiveOwnerThread()) {
+            else if (current == getExclusiveOwnerThread()) {//锁已被占用，则判断是否被同一个线程占用，如果是同一个，锁占用次数计数加1，重用的实现方式
                 int nextc = c + acquires;
                 if (nextc < 0) // overflow
                     throw new Error("Maximum lock count exceeded");
@@ -150,12 +158,15 @@ public class ReentrantLock implements Lock, java.io.Serializable {
         }
 
         protected final boolean tryRelease(int releases) {
+            //锁状态减releases
             int c = getState() - releases;
+            //如果不是持有锁的线程，则报错
             if (Thread.currentThread() != getExclusiveOwnerThread())
                 throw new IllegalMonitorStateException();
             boolean free = false;
+            //如果锁状态为0，则修改占用当前锁的线程为空
             if (c == 0) {
-                free = true;
+                free = true;//只有c=0,才会返回true,只有返回true才会继续唤醒队列中等待的线程
                 setExclusiveOwnerThread(null);
             }
             setState(c);
@@ -200,6 +211,9 @@ public class ReentrantLock implements Lock, java.io.Serializable {
     /**
      * Sync object for non-fair locks
      */
+    /***
+     * 非公平锁的子类
+     */
     static final class NonfairSync extends Sync {
         private static final long serialVersionUID = 7316153563782823691L;
 
@@ -208,12 +222,21 @@ public class ReentrantLock implements Lock, java.io.Serializable {
          * acquire on failure.
          */
         final void lock() {
+            /***
+             * 查询修改锁的状态（不管队列是否有线程在等待，这就是非公平锁的原因）
+             */
             if (compareAndSetState(0, 1))
                 setExclusiveOwnerThread(Thread.currentThread());
             else
-                acquire(1);
-        }
+            /***
+             *   if (!tryAcquire(arg) &&
+             *             acquireQueued(addWaiter(Node.EXCLUSIVE), arg))
+             *             selfInterrupt();
+             */
+                acquire(1);//继承AQS,并调用tryAcquire
 
+        }
+        //尝试获得独占锁
         protected final boolean tryAcquire(int acquires) {
             return nonfairTryAcquire(acquires);
         }
@@ -258,6 +281,9 @@ public class ReentrantLock implements Lock, java.io.Serializable {
      * Creates an instance of {@code ReentrantLock}.
      * This is equivalent to using {@code ReentrantLock(false)}.
      */
+    /***
+     * 默认是非公平锁
+     */
     public ReentrantLock() {
         sync = new NonfairSync();
     }
@@ -267,6 +293,10 @@ public class ReentrantLock implements Lock, java.io.Serializable {
      * given fairness policy.
      *
      * @param fair {@code true} if this lock should use a fair ordering policy
+     */
+    /***
+     * 指定是否是公平锁
+     * @param fair
      */
     public ReentrantLock(boolean fair) {
         sync = fair ? new FairSync() : new NonfairSync();
@@ -456,7 +486,19 @@ public class ReentrantLock implements Lock, java.io.Serializable {
      * @throws IllegalMonitorStateException if the current thread does not
      *         hold this lock
      */
+    /***
+     * 解锁
+     */
     public void unlock() {
+        /***
+         *  if (tryRelease(arg)) {
+         *             Node h = head;
+         *             if (h != null && h.waitStatus != 0)
+         *                 unparkSuccessor(h);
+         *             return true;
+         *         }
+         */
+        //锁状态减1
         sync.release(1);
     }
 
