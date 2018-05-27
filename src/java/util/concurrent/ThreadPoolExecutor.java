@@ -955,6 +955,8 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
      */
     /***
      *根据线程任务添加工作线程worker
+     *      检查线程池的状态、当前worker是用来干嘛，是新增的core线程还是在关闭线程池时用来处理剩余的队列的任务等等
+     *
      * @param firstTask
      * @param core
      * @return
@@ -1037,22 +1039,22 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
                         (rs == SHUTDOWN && firstTask == null)) {
                         if (t.isAlive()) // precheck that t is startable
                             throw new IllegalThreadStateException();
-                        workers.add(w);
+                        workers.add(w);//将worker添加到workers
                         int s = workers.size();
                         if (s > largestPoolSize)
                             largestPoolSize = s;
-                        workerAdded = true;
+                        workerAdded = true;//添加worker成功
                     }
                 } finally {
                     mainLock.unlock();
                 }
                 if (workerAdded) {
-                    t.start();
+                    t.start();//如果worker添加成功，则启动worker中的thread线程
                     workerStarted = true;
                 }
             }
         } finally {
-            if (! workerStarted)
+            if (! workerStarted)//如果添加失败(比如已经添加到workers中但是启动失败)
                 addWorkerFailed(w);
         }
         return workerStarted;
@@ -1069,10 +1071,10 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
         final ReentrantLock mainLock = this.mainLock;
         mainLock.lock();
         try {
-            if (w != null)
+            if (w != null)//一般是workers添加成功，但是启动worker.thread失败，这个时候就要移除这个worker
                 workers.remove(w);
-            decrementWorkerCount();
-            tryTerminate();
+            decrementWorkerCount();//将worker计数恢复
+            tryTerminate();//判断线程池状态，决定是否将线程池状态修改为Terminate，因为这个worker有可能是最后一个
         } finally {
             mainLock.unlock();
         }
@@ -1495,15 +1497,17 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
             if (addWorker(command, true))
                 return;
             c = ctl.get();
-        }
+        }//执行到这里，说明add worker失败了，这个时候可能线程池已经关闭，也有可能是核心线程已经满了
+        //如果是核心线程已经满了，则将线程加入到等待队列中，这个offer如果队列满了，则直接返回false
         if (isRunning(c) && workQueue.offer(command)) {
-            int recheck = ctl.get();
+            int recheck = ctl.get();//获得线程池值
+            //如果线程池不是running状态，则不应该允许添加任务，所以要将之前添加的移除
             if (! isRunning(recheck) && remove(command))
-                reject(command);
-            else if (workerCountOf(recheck) == 0)
-                addWorker(null, false);
+                reject(command);//根据拒绝策略处理这个被拒绝的任务
+            else if (workerCountOf(recheck) == 0)//如果worker数量是0
+                addWorker(null, false);//添加非核心线程，且该线程没有fastTask
         }
-        else if (!addWorker(command, false))
+        else if (!addWorker(command, false))//如果添加非核心线程失败，则拒绝这个任务
             reject(command);
     }
 
