@@ -1160,7 +1160,7 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
      */
     /***
      * 尝试从队列中获取的等待的任务
-     * 1、如果线程池状态为STOP、TIDYING、TERMINATED，或者说队列为空且线程池状态为shutdown， 则释放该空闲的worker并返回nuLL
+     * 1、如果线程池状态为STOP、TIDYING、TERMINATED，或者说队列为空且线程池状态为shutdown， 则释放返回null(接下来worker会被释放掉)
      * 2、如果线程未达到释放的条件，则统计当前线程数
      *      如果allowCoreThreadTimeOut=true（也就是表示允许空闲线程等待超时）|| 已有线程超过核心线程数核心线程数
      * @return
@@ -1261,7 +1261,19 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
      * @param w the worker
      */
     /**
-     * 启动worker线程
+     * 开始执行worker工作任务
+     * 1、获取待执行的task任务，会先检查firstWork是否null（如果该worker是为了用来处理等待队列中剩余的任务，则它是没有firstTask的）
+     *      firstWork==null,则会从等待队列中获取线程
+     *      firstWork!=null,则先执行这个firstWork，执行完后继续从对垒中获取任务
+     * 2、检查线程池的状态
+     *      线程池状态rs>=STOP,中断线程,也就是更新线程状态的中断位
+     *      线程池状态rs<STOP,则清除当前线程的中断状态
+     * 3、调用beforeExecute(wt, task);这个可以自己扩展，可以在线程执行前做一些准备工作
+     * 4、调用task.run()，执行任务的run方法，这里直接调用run方法，避免再启一个线程
+     * 5、调用afterExecute(wt, task);这个可以自己扩展，可以做一些善后工作，比如关闭资源
+     * 6、执行完所有的task：
+     *      如果当前所有的线程数大于core线程数，则getTask()直接返回null，那么会调用processWorkerExit(w, completedAbruptly)正常关闭关闭worker
+     *      如果当前所有的线程数小于core线程数，则getTask()会一直阻塞不返回(从而控制核心线程数)
      * @param w
      */
     final void runWorker(Worker w) {
@@ -1286,13 +1298,8 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
                  * 判断线程状态：
                  *      （线程池状态为TIDYING/STOP/TERMINATED || (线程中断状态为true && 线程池状态为TIDYING/STOP/TERMINATED ) )
                  *          && worker还未被中断
-                 *      （这个代码是不是有问题：A||(B&&A) 不是跟A一样吗？难道是为了清除当前线程的中断状态吗）
-                 *          如果当前线程池是running：
-                 *              Thread.interrupted()=true,则清除当前线程的中断状态
-                 *              Thread.interrupted()=false,则整个表达式返回False
-                 *          如果当前线程池是>running（表示已关闭）：
-                 *              wt.isInterrupted()=false,则中断wt(也就是worker)当前线程
-                 *              wt.isInterrupted()=true,则无需中断wt(也就是worker)当前线程
+                            线程池状态rs>=STOP,中断线程
+                 *          线程池状态rs<STOP,则清除当前线程的中断状态
                  */
                 if ((runStateAtLeast(ctl.get(), STOP) ||
                      (Thread.interrupted() &&
@@ -1300,10 +1307,11 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
                     !wt.isInterrupted())
                     wt.interrupt();
                 try {
-                    beforeExecute(wt, task);//这个是扩展方法，可以自己实现，在线程执行前执行
+                    ////这个是扩展方法，可以自己实现，在线程执行前执行
+                    beforeExecute(wt, task);
                     Throwable thrown = null;
                     try {
-                        task.run();//启动线程任务
+                        task.run();//启动线程任务，这里直接调用run方法，避免再启一个线程
                     } catch (RuntimeException x) {
                         thrown = x; throw x;
                     } catch (Error x) {
@@ -1314,13 +1322,15 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
                         afterExecute(task, thrown);
                     }
                 } finally {
+                    //清除这个任务，协助gc回收
                     task = null;
                     w.completedTasks++;
                     w.unlock();
                 }
-            }
+            }//正常执行完所有的task，并不阻塞返回，则表示该worker可清除，则completedAbruptly=false
             completedAbruptly = false;
         } finally {
+            //退出并关闭worker
             processWorkerExit(w, completedAbruptly);
         }
     }
