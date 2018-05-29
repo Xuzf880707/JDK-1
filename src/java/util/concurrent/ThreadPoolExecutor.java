@@ -1161,7 +1161,7 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
     /***
      * 尝试从队列中获取的等待的任务
      * 1、如果线程池状态为STOP、TIDYING、TERMINATED，或者说队列为空且线程池状态为shutdown， 则释放返回null(接下来worker会被释放掉)
-     * 2、从队列中拉去task任务
+     * 2、从队列中拉去task任务(这边是控制线程的核心线程数的主要逻辑)
      *      a:如果核心线程设置了空闲时间或者当前线程总数超过核心线程，则表示该线程在获取task的时候，不会一直阻塞下去，会在等待一段时间后返回结果：workQueue.poll(keepAliveTime, TimeUnit.NANOSECONDS)，不会一直不阻塞等待
      *          没拿到则返回null
      *      b:如果核心线程未设置空闲时间且当前线程总数小于等于核心线程 workQueue.take()阻塞等待

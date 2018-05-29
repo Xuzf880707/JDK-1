@@ -31,8 +31,8 @@
       <file leaf-file-name="ThreadPoolExecutor.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/ThreadPoolExecutor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="1168" column="69" selection-start-line="1168" selection-start-column="69" selection-end-line="1168" selection-end-column="69" />
+            <state relative-caret-position="92">
+              <caret line="1163" column="40" selection-start-line="1163" selection-start-column="40" selection-end-line="1163" selection-end-column="40" />
               <folding>
                 <element signature="e#17517#17518#0" expanded="true" />
                 <element signature="e#17546#17547#0" expanded="true" />
@@ -357,7 +357,7 @@
       <workItem from="1525829204046" duration="2919000" />
       <workItem from="1525832536644" duration="1536000" />
       <workItem from="1525917992652" duration="22781000" />
-      <workItem from="1526858243611" duration="19728000" />
+      <workItem from="1526858243611" duration="19757000" />
     </task>
     <task id="LOCAL-00001" summary="学习jdk添加中文注释-countdownlatch/ReentrantReadWriteLock/ReentrantLock/AQS">
       <created>1526548969712</created>
@@ -415,11 +415,18 @@
       <option name="project" value="LOCAL" />
       <updated>1527578884508</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="学习jdk添加中文注释-countdownlatch/ReentrantReadWriteLock/ReentrantLock/AQS">
+      <created>1527580302571</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1527580302571</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46964000" />
+    <option name="totallyTimeSpent" value="46993000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="805" extended-state="0" />
@@ -794,8 +801,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/ThreadPoolExecutor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="1168" column="69" selection-start-line="1168" selection-start-column="69" selection-end-line="1168" selection-end-column="69" />
+        <state relative-caret-position="92">
+          <caret line="1163" column="40" selection-start-line="1163" selection-start-column="40" selection-end-line="1163" selection-end-column="40" />
           <folding>
             <element signature="e#17517#17518#0" expanded="true" />
             <element signature="e#17546#17547#0" expanded="true" />
