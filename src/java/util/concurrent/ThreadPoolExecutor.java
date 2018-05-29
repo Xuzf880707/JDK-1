@@ -1053,8 +1053,6 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
                      *      b:rs == SHUTDOWN && firstTask == null,比如线程池正常关闭了，这个时候会添加worker来处理队列中待处理的task任务
                      *
                      */
-
-
                     if (rs < SHUTDOWN ||
                         (rs == SHUTDOWN && firstTask == null)) {
                         if (t.isAlive()) // precheck that t is startable
@@ -1069,7 +1067,9 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
                     mainLock.unlock();
                 }
                 if (workerAdded) {
-                    t.start();//如果worker添加成功，则启动worker中的thread线程
+                    //如果worker添加成功，则启动worker中的thread线程,这个thread在start的时候，会调用worker的run方法
+                   // 实际上：Thread t = new Thread(Worker);
+                    t.start();
                     workerStarted = true;
                 }
             }
@@ -1086,6 +1086,7 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
      * - decrements worker count
      * - rechecks for termination, in case the existence of this
      *   worker was holding up termination
+     *   如果worker启动失败，则要把worker从workers中移除，并将计数减1，同时要检查线程池是否可关闭
      */
     private void addWorkerFailed(Worker w) {
         final ReentrantLock mainLock = this.mainLock;
@@ -1259,17 +1260,21 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
      *
      * @param w the worker
      */
+    /**
+     * 启动worker线程
+     * @param w
+     */
     final void runWorker(Worker w) {
-        //获取当前线程
+        //获取当前线程，
         Thread wt = Thread.currentThread();
-        //获得worker的fristTask线程，可以为null
+        //获得worker的fristTask线程，可以为null(当线程池关闭的时候，会创建worker用于处理队列中剩下的任务，这个时候fristTask=null)
         Runnable task = w.firstTask;
         w.firstTask = null;
         w.unlock(); // 释放worker的锁，允许被interrupt中断
         boolean completedAbruptly = true;
         try {
             /***
-             * 如果worker的firstTask为空，那么就通过getTask取队列中拿取任务
+             * 如果worker的firstTask为空，那么就应该通过getTask去队列中拿取任务
              */
             while (task != null || (task = getTask()) != null) {//如果有可被worker执行的task任务
                 w.lock();
