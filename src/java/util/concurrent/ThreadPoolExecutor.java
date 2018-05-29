@@ -1124,14 +1124,29 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
      * @param w the worker
      * @param completedAbruptly if the worker died due to user exception
      */
+    /***
+     * 线程退出(当队列为空，线程数大于核心线程的时候，该线程都会退出销毁)
+     * 1、非正常导致退出销毁线程，则线程池中的线程数要减1
+     * 2、从workers移除该worker(因为这个线程退出有可能是因为启动线程的时候失败导致线程退出)
+     * 3、检查尝试是否终结线程池(如果它是最后一个线程)
+     * 4、如果线程池是running或stop的正常状态：
+     *      如果是非中断而导致线程退出：
+     *          保持最少核心线程数，如果线程池线程数少于最少核心线程数，则要补上一个没有firstTask任务的线程，用于弥补被丢弃的线程
+     *
+     * @param w
+     * @param completedAbruptly
+     */
     private void processWorkerExit(Worker w, boolean completedAbruptly) {
+        //如果是被中断退出，则计数要减1
         if (completedAbruptly) // If abrupt, then workerCount wasn't adjusted
             decrementWorkerCount();
 
         final ReentrantLock mainLock = this.mainLock;
         mainLock.lock();
         try {
+            //汇总线程池完成的总任务
             completedTaskCount += w.completedTasks;
+            //从workers移除该worker(因为这个线程退出有可能是因为启动线程的时候失败导致线程退出)
             workers.remove(w);
         } finally {
             mainLock.unlock();
@@ -1140,14 +1155,17 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
         tryTerminate();
 
         int c = ctl.get();
-        if (runStateLessThan(c, STOP)) {
-            if (!completedAbruptly) {
+        if (runStateLessThan(c, STOP)) {//如果线程池是running或shutdown
+            if (!completedAbruptly) {//如果是非中断而导致线程退出，
+                //如果对核心线程设置了空闲时间，则核心线程允许最少为0，不然核心线程最少是corePoolSize
                 int min = allowCoreThreadTimeOut ? 0 : corePoolSize;
                 if (min == 0 && ! workQueue.isEmpty())
                     min = 1;
+                //如果当前线程池的总线程数大于最少核心线程数，则不填补被丢弃的线程
                 if (workerCountOf(c) >= min)
                     return; // replacement not needed
             }
+            //保持最少核心线程数，如果线程池线程数少于最少核心线程数，则要补上一个没有firstTask任务的线程，用于弥补被丢弃的线程
             addWorker(null, false);
         }
     }
