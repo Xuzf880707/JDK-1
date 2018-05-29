@@ -1161,11 +1161,16 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
     /***
      * 尝试从队列中获取的等待的任务
      * 1、如果线程池状态为STOP、TIDYING、TERMINATED，或者说队列为空且线程池状态为shutdown， 则释放返回null(接下来worker会被释放掉)
-     * 2、如果线程未达到释放的条件，则统计当前线程数
-     *      如果allowCoreThreadTimeOut=true（也就是表示允许空闲线程等待超时）|| 已有线程超过核心线程数核心线程数
+     * 2、从队列中拉去task任务
+     *      a:如果核心线程设置了空闲时间或者当前线程总数超过核心线程，则表示该线程在获取task的时候，不会一直阻塞下去，会在等待一段时间后返回结果：workQueue.poll(keepAliveTime, TimeUnit.NANOSECONDS)，不会一直不阻塞等待
+     *          没拿到则返回null
+     *      b:如果核心线程未设置空闲时间且当前线程总数小于等于核心线程 workQueue.take()阻塞等待
+     * 3、检查拉取的task是否为null
+     *      task=null,则表示该worker可以移除，它会返回null给上一层(并在之后被销毁)，并且会更新线程池的值
      * @return
      */
     private Runnable getTask() {
+        //timedOut=true的话表示，该线程从队列中没拿到任务并被直接返回(只有线程池中的线程超过核心线程总数或者核心线程设置了超时)
         boolean timedOut = false; // Did the last poll() time out?
 
         retry:
@@ -1184,7 +1189,7 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
             //
             for (;;) {
                 int wc = workerCountOf(c);
-                //判断线程是否允许一段事件后超时，或者线程数还超过核心线程数
+                //判断线程是否设置了超时时间，或者池中的线程数是否超过核心线程数
                 timed = allowCoreThreadTimeOut || wc > corePoolSize;
                 //
                 if (wc <= maximumPoolSize && ! (timedOut && timed))
@@ -1201,11 +1206,13 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
                 //timed==true，表示不阻塞获取(获取不到可销毁)
                 //poll():不阻塞等待
                 //take()阻塞等待
+                //如果当前线程数超过核心线程数，或者核心线程设置了超时时间，则采用poll从队列中获取task任务，否则采用take方法来获取任务
                 Runnable r = timed ?
                     workQueue.poll(keepAliveTime, TimeUnit.NANOSECONDS) :
                     workQueue.take();
                 if (r != null)
                     return r;
+                //如果队列中不存在task了，表示该线程可销毁
                 timedOut = true;
             } catch (InterruptedException retry) {
                 timedOut = false;

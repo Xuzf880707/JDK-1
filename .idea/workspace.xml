@@ -31,8 +31,8 @@
       <file leaf-file-name="ThreadPoolExecutor.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/ThreadPoolExecutor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="94">
-              <caret line="1276" column="51" selection-start-line="1276" selection-start-column="51" selection-end-line="1276" selection-end-column="51" />
+            <state relative-caret-position="167">
+              <caret line="1168" column="69" selection-start-line="1168" selection-start-column="69" selection-end-line="1168" selection-end-column="69" />
               <folding>
                 <element signature="e#17517#17518#0" expanded="true" />
                 <element signature="e#17546#17547#0" expanded="true" />
@@ -40,6 +40,8 @@
                 <element signature="e#17676#17677#0" expanded="true" />
                 <element signature="e#17829#17830#0" expanded="true" />
                 <element signature="e#17889#17890#0" expanded="true" />
+                <element signature="e#18068#18069#0" expanded="true" />
+                <element signature="e#18128#18129#0" expanded="true" />
                 <element signature="e#20404#20412#0" expanded="true" />
                 <element signature="e#33560#33561#0" expanded="true" />
                 <element signature="e#33616#33617#0" expanded="true" />
@@ -355,7 +357,7 @@
       <workItem from="1525829204046" duration="2919000" />
       <workItem from="1525832536644" duration="1536000" />
       <workItem from="1525917992652" duration="22781000" />
-      <workItem from="1526858243611" duration="15917000" />
+      <workItem from="1526858243611" duration="19728000" />
     </task>
     <task id="LOCAL-00001" summary="学习jdk添加中文注释-countdownlatch/ReentrantReadWriteLock/ReentrantLock/AQS">
       <created>1526548969712</created>
@@ -399,11 +401,25 @@
       <option name="project" value="LOCAL" />
       <updated>1527574211385</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="学习jdk添加中文注释-countdownlatch/ReentrantReadWriteLock/ReentrantLock/AQS">
+      <created>1527575939951</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1527575939951</updated>
+    </task>
+    <task id="LOCAL-00008" summary="学习jdk添加中文注释-countdownlatch/ReentrantReadWriteLock/ReentrantLock/AQS">
+      <created>1527578884508</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1527578884508</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43153000" />
+    <option name="totallyTimeSpent" value="46964000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="805" extended-state="0" />
@@ -422,7 +438,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32880434" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23104435" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.23104435" />
       <window_info anchor="bottom" id="Tail" order="7" />
       <window_info anchor="right" id="Database" order="3" weight="0.3297568" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32909605" />
@@ -456,7 +472,7 @@
       <window_info id="Designer" order="3" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32909605" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32909605" />
       <window_info anchor="right" id="Database" order="6" weight="0.3297568" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32880434" />
@@ -564,6 +580,8 @@
             <element signature="e#17676#17677#0" expanded="true" />
             <element signature="e#17829#17830#0" expanded="true" />
             <element signature="e#17889#17890#0" expanded="true" />
+            <element signature="e#18068#18069#0" expanded="true" />
+            <element signature="e#18128#18129#0" expanded="true" />
             <element signature="e#20404#20412#0" expanded="true" />
             <element signature="e#33560#33561#0" expanded="true" />
             <element signature="e#33616#33617#0" expanded="true" />
@@ -776,8 +794,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/ThreadPoolExecutor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="1276" column="51" selection-start-line="1276" selection-start-column="51" selection-end-line="1276" selection-end-column="51" />
+        <state relative-caret-position="167">
+          <caret line="1168" column="69" selection-start-line="1168" selection-start-column="69" selection-end-line="1168" selection-end-column="69" />
           <folding>
             <element signature="e#17517#17518#0" expanded="true" />
             <element signature="e#17546#17547#0" expanded="true" />
@@ -785,6 +803,8 @@
             <element signature="e#17676#17677#0" expanded="true" />
             <element signature="e#17829#17830#0" expanded="true" />
             <element signature="e#17889#17890#0" expanded="true" />
+            <element signature="e#18068#18069#0" expanded="true" />
+            <element signature="e#18128#18129#0" expanded="true" />
             <element signature="e#20404#20412#0" expanded="true" />
             <element signature="e#33560#33561#0" expanded="true" />
             <element signature="e#33616#33617#0" expanded="true" />
