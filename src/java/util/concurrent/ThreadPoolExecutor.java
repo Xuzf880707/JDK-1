@@ -958,8 +958,21 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
      *      检查线程池的状态、当前worker是用来干嘛，是新增的core线程还是在关闭线程池时用来处理剩余的队列的任务等等
      *
      * @param firstTask
-     * @param core
+     * @param core：false表示非核心线程(比如核心线程满了 队列也满了)  true表示创建核心线程
      * @return
+     * @deprecated
+     *      1、检查线程池状态，确认是否可创建工作线程worker，以下三种情况返回false，创建失败
+     *          a:线程池状态rs>shutdown,表示线程池已经关闭了，就没必要创建新的工作线程worker
+     *          b:线程池状态rs=shutdown&&firstTask！=null，表示线程池已经是shutdown状态，这个时候线程池应该等待已有任务全部执行完后，然后关闭线程池，所以不应该为新的任务firstTask分配新的线程
+     *          c:线程池状态rs=shutdown&&firstTask==null&&workQueue.isEmpty(),在线程池被调用shutdown，如果队列已经是空了，就没必要创建新的工作线程worker来处理队列中的任务
+     *      2、通过在for循环中用cas操作来创建worker，可保证在高并发的情况下能成功添加统计worker,也能保证worker不会超过配置的参数限制
+     *          (1)、如果线程池中的worker数已经超出了容量，则添加worker失败，直接返回false
+     *          (2)、如果创建的是核心线程，而线程池中的worker已经超出了核心线程数，则添加worker失败，直接返回false
+     *          (3)、如果创建的是非核心线程，而线程池中的worker已经超出了最大线程数，则添加worker失败，直接返回false
+     *          (4)、并发CAS的添加worker：
+     *              添加失败,则从判断线程池状态的变化，如果发生了改变，则从步骤1重新开始；如果线程池状态未变化，则从步骤2重新开始
+     *              添加成功：则可以执行步骤3
+     *      3、
      */
     private boolean addWorker(Runnable firstTask, boolean core) {
         /***
@@ -974,8 +987,8 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
             /***
              * 如果线程池已关闭 且
              *      线程池是>SHUTDOWN 线程池已经关闭大于shutdown了，则就不应该给它分配创建woker了
-             *          || (rs==shutdown &&firstTask!=null)则就不应该给它分配创建woker了
-             *          || (rs==shutdown &&firstTask==null&&workQueueworkQueue.isEmpty() 这个时候等待队列中也没任务，也不需要再创建worker
+             *          || (rs==shutdown &&firstTask!=null)表示线程池已经是shutdown状态，这个时候线程池应该等待已有任务全部执行完后，然后关闭线程池，所以不应该为新的任务firstTask分配新的线程
+             *          || (rs==shutdown &&firstTask==null&&workQueueworkQueue.isEmpty() 在线程池被调用shutdown，如果队列已经是空了，就没必要创建新的工作线程worker来处理队列中的任务
              *
              */
             if (rs >= SHUTDOWN &&
@@ -1467,6 +1480,14 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
      *         {@code RejectedExecutionHandler}, if the task
      *         cannot be accepted for execution
      * @throws NullPointerException if {@code command} is null
+     */
+    /***
+     * 1、检查工作线程worker是否超过核心线程数配置
+     * 2、检查线程池状态，看是否需要将线程加入等待队列(只有线程池是running情况下才会被加入队列)
+     * 3、如果队列满了，则创建非核心线程
+     * 4、非核心线程创建失败，则拒绝该task任务
+     *
+     * @param command
      */
     public void execute(Runnable command) {
         if (command == null)
