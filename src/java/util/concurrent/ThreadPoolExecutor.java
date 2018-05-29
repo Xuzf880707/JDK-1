@@ -748,6 +748,15 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
      * from the queue during shutdown. The method is non-private to
      * allow access from ScheduledThreadPoolExecutor.
      */
+    /***
+     * 尝试终结线程池。
+     *      每个线程worker在关闭退出的时候都要做一次尝试，如果线程池调用了shutdown，且队列为空，且它又是线程池中的最后一个线程，则它就要负责终结线程池。
+     *  1、检查线程池状态和队列的情况
+     *      如果线程池是runing状态，又或者线程池是TERMINATED或TIDYING，那么就不需要调用终结线程池的动作，直接返回
+     *      如果线程池是SHUTDOWN，且队列不为空，则也不应该调用终结线程池的动作，直接返回
+     *  2、中断空闲的线程(比如空闲的核心线程)
+     *  3、终结线程池
+     */
     final void tryTerminate() {
         for (;;) {
             int c = ctl.get();
@@ -755,6 +764,7 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
                 runStateAtLeast(c, TIDYING) ||
                 (runStateOf(c) == SHUTDOWN && ! workQueue.isEmpty()))
                 return;
+            //中断一个空闲的线程
             if (workerCountOf(c) != 0) { // Eligible to terminate
                 interruptIdleWorkers(ONLY_ONE);
                 return;
@@ -764,7 +774,7 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
             mainLock.lock();
             try {
                 if (ctl.compareAndSet(c, ctlOf(TIDYING, 0))) {
-                    try {
+                    try {//中断线程
                         terminated();
                     } finally {
                         ctl.set(ctlOf(TERMINATED, 0));
