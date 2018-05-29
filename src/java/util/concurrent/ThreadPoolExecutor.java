@@ -972,7 +972,14 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
      *          (4)、并发CAS的添加worker：
      *              添加失败,则从判断线程池状态的变化，如果发生了改变，则从步骤1重新开始；如果线程池状态未变化，则从步骤2重新开始
      *              添加成功：则可以执行步骤3
-     *      3、
+     *      3、创建一个worker，并为worker.thread分配一个Thread线程对象,并再次检查线程池的状态变化(高并发的情况下，线程池的状态可能发生改变)
+     *          线程池状态rs=running,则将worker添加到集合workers，workerAdded = true
+     *          线程池状态rs=shutdown&&fastTask==null，则表示是新建worker用来处理队列中等待的队列，则将worker添加到集合workers，workerAdded = true
+     *          其它情况则worker添加失败，并返回workerAdded = false
+     *      4、判断workerAdded，如果workerAdded = true则表示worker成功新增成功,则启动worker中的thread线程并开始执行任务，在以下情况下workerStarted=true,其它情况下workerStarted=false
+     *          a:worker添加成功，并成功启动worker中的线程thread,worker本身并不启动。这样保证一个worker对应一个线程
+     *      5、检查workerStarted
+     *          workerStarted=false,表示线程启动失败，则要把worker从workers中移除，且对于worker的统计的值要减一
      */
     private boolean addWorker(Runnable firstTask, boolean core) {
         /***
@@ -1067,7 +1074,7 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
                 }
             }
         } finally {
-            if (! workerStarted)//如果添加失败(比如已经添加到workers中但是启动失败)
+            if (! workerStarted)//如果添加失败(比如已经添加到workers中但是启动失败)，则要将worker从workers移除，且计数减1
                 addWorkerFailed(w);
         }
         return workerStarted;
