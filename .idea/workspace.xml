@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eff3db11-78fa-40ca-8c05-ebc15269d269" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java/util/concurrent/ThreadPoolExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/util/concurrent/ThreadPoolExecutor.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -62,8 +61,8 @@
       <file leaf-file-name="ThreadPoolExecutor.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/ThreadPoolExecutor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="974" column="14" selection-start-line="974" selection-start-column="14" selection-end-line="974" selection-end-column="14" />
+            <state relative-caret-position="403">
+              <caret line="1076" column="89" selection-start-line="1076" selection-start-column="89" selection-end-line="1076" selection-end-column="89" />
               <folding>
                 <element signature="e#17517#17518#0" expanded="true" />
                 <element signature="e#17546#17547#0" expanded="true" />
@@ -373,7 +372,7 @@
       <workItem from="1525829204046" duration="2919000" />
       <workItem from="1525832536644" duration="1536000" />
       <workItem from="1525917992652" duration="22781000" />
-      <workItem from="1526858243611" duration="12197000" />
+      <workItem from="1526858243611" duration="14008000" />
     </task>
     <task id="LOCAL-00001" summary="学习jdk添加中文注释-countdownlatch/ReentrantReadWriteLock/ReentrantLock/AQS">
       <created>1526548969712</created>
@@ -396,11 +395,18 @@
       <option name="project" value="LOCAL" />
       <updated>1527433320583</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="学习jdk添加中文注释-countdownlatch/ReentrantReadWriteLock/ReentrantLock/AQS">
+      <created>1527571655832</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1527571655832</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39433000" />
+    <option name="totallyTimeSpent" value="41244000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="805" extended-state="0" />
@@ -710,8 +716,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/ThreadPoolExecutor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="974" column="14" selection-start-line="974" selection-start-column="14" selection-end-line="974" selection-end-column="14" />
+        <state relative-caret-position="403">
+          <caret line="1076" column="89" selection-start-line="1076" selection-start-column="89" selection-end-line="1076" selection-end-column="89" />
           <folding>
             <element signature="e#17517#17518#0" expanded="true" />
             <element signature="e#17546#17547#0" expanded="true" />
