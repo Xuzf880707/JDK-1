@@ -31,42 +31,18 @@
       <file leaf-file-name="ThreadPoolExecutor.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/ThreadPoolExecutor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="466">
-              <caret line="1163" column="50" selection-start-line="1163" selection-start-column="50" selection-end-line="1163" selection-end-column="50" />
+            <state relative-caret-position="184">
+              <caret line="711" column="24" selection-start-line="711" selection-start-column="16" selection-end-line="711" selection-end-column="24" />
               <folding>
                 <element signature="e#17357#17358#0" expanded="true" />
                 <element signature="e#17385#17386#0" expanded="true" />
-                <element signature="e#17517#17518#0" expanded="true" />
-                <element signature="e#17546#17547#0" expanded="true" />
-                <element signature="e#17641#17642#0" expanded="true" />
-                <element signature="e#17676#17677#0" expanded="true" />
-                <element signature="e#17829#17830#0" expanded="true" />
-                <element signature="e#17889#17890#0" expanded="true" />
-                <element signature="e#18068#18069#0" expanded="true" />
-                <element signature="e#18128#18129#0" expanded="true" />
+                <element signature="e#17531#17532#0" expanded="true" />
+                <element signature="e#17560#17561#0" expanded="true" />
                 <element signature="e#20404#20412#0" expanded="true" />
-                <element signature="e#33560#33561#0" expanded="true" />
-                <element signature="e#33616#33617#0" expanded="true" />
-                <element signature="e#64909#64910#0" expanded="true" />
-                <element signature="e#64954#64955#0" expanded="true" />
-                <element signature="e#65639#65640#0" expanded="true" />
-                <element signature="e#65700#65701#0" expanded="true" />
-                <element signature="e#66413#66414#0" expanded="true" />
-                <element signature="e#66439#66440#0" expanded="true" />
-                <element signature="e#67063#67064#0" expanded="true" />
-                <element signature="e#67099#67100#0" expanded="true" />
-                <element signature="e#67727#67728#0" expanded="true" />
-                <element signature="e#67757#67758#0" expanded="true" />
-                <element signature="e#69252#69253#0" expanded="true" />
-                <element signature="e#69287#69288#0" expanded="true" />
-                <element signature="e#71087#71088#0" expanded="true" />
-                <element signature="e#71132#71133#0" expanded="true" />
-                <element signature="e#73399#73400#0" expanded="true" />
-                <element signature="e#73437#73438#0" expanded="true" />
-                <element signature="e#75042#75043#0" expanded="true" />
-                <element signature="e#75114#75115#0" expanded="true" />
-                <element signature="e#75511#75512#0" expanded="true" />
-                <element signature="e#75543#75544#0" expanded="true" />
+                <element signature="e#33646#33647#0" expanded="true" />
+                <element signature="e#33689#33690#0" expanded="true" />
+                <element signature="e#67568#67569#0" expanded="true" />
+                <element signature="e#67613#67614#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -97,7 +73,7 @@
       <file leaf-file-name="Executors.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/Executors.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
+            <state relative-caret-position="7740">
               <caret line="561" column="8" selection-start-line="561" selection-start-column="8" selection-end-line="561" selection-end-column="8" />
               <folding>
                 <element signature="e#0#29547#0" expanded="true" />
@@ -109,7 +85,7 @@
       <file leaf-file-name="BlockingQueue.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/BlockingQueue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
+            <state relative-caret-position="1455">
               <caret line="131" column="32" selection-start-line="131" selection-start-column="19" selection-end-line="131" selection-end-column="32" />
             </state>
           </provider>
@@ -129,7 +105,7 @@
       <file leaf-file-name="ScheduledThreadPoolExecutor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/ScheduledThreadPoolExecutor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
+            <state relative-caret-position="225">
               <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
             </state>
           </provider>
@@ -150,7 +126,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>hasQueuedPredecessors</find>
       <find>unlock</find>
       <find>releaseShared</find>
       <find>readerLock</find>
@@ -180,6 +155,7 @@
       <find>ThreadPoolExecutor</find>
       <find>factory</find>
       <find>defaultThreadFactory</find>
+      <find>shutdown(</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -231,9 +207,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -278,6 +251,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -359,7 +335,8 @@
       <workItem from="1525829204046" duration="2919000" />
       <workItem from="1525832536644" duration="1536000" />
       <workItem from="1525917992652" duration="22781000" />
-      <workItem from="1526858243611" duration="22415000" />
+      <workItem from="1526858243611" duration="24595000" />
+      <workItem from="1527604238809" duration="1422000" />
     </task>
     <task id="LOCAL-00001" summary="学习jdk添加中文注释-countdownlatch/ReentrantReadWriteLock/ReentrantLock/AQS">
       <created>1526548969712</created>
@@ -438,11 +415,18 @@
       <option name="project" value="LOCAL" />
       <updated>1527581928064</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="学习jdk添加中文注释-countdownlatch/ReentrantReadWriteLock/ReentrantLock/AQS">
+      <created>1527583151067</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1527583151067</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49651000" />
+    <option name="totallyTimeSpent" value="53253000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="805" extended-state="0" />
@@ -457,14 +441,13 @@
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.3297568" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.21327683" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32880434" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.23104435" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23390558" />
       <window_info anchor="bottom" id="Tail" order="7" />
       <window_info anchor="right" id="Database" order="3" weight="0.3297568" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32909605" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24964234" />
       <window_info id="UI Designer" order="2" />
@@ -473,27 +456,28 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Messages" order="7" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" order="7" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32909605" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Tail" order="7" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.24964234" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23104435" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24964234" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TODO" order="6" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32909605" />
       <window_info anchor="right" id="Database" order="6" weight="0.3297568" />
@@ -501,10 +485,10 @@
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32880434" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Capture Tool" order="5" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Messages" order="12" />
       <window_info anchor="right" id="Maven Projects" order="8" weight="0.3297568" />
       <window_info id="Favorites" order="6" side_tool="true" />
@@ -512,6 +496,32 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -525,6 +535,84 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/ThreadPoolExecutor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34440">
+          <caret line="2296" column="11" lean-forward="true" selection-start-line="2296" selection-start-column="11" selection-end-line="2296" selection-end-column="11" />
+          <folding>
+            <element signature="e#17357#17358#0" expanded="true" />
+            <element signature="e#17385#17386#0" expanded="true" />
+            <element signature="e#17531#17532#0" expanded="true" />
+            <element signature="e#17560#17561#0" expanded="true" />
+            <element signature="e#20404#20412#0" expanded="true" />
+            <element signature="e#33646#33647#0" expanded="true" />
+            <element signature="e#33689#33690#0" expanded="true" />
+            <element signature="e#67568#67569#0" expanded="true" />
+            <element signature="e#67613#67614#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/TimeoutException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#1277#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/Executor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#3753#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/Executors.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7740">
+          <caret line="561" column="8" selection-start-line="561" selection-start-column="8" selection-end-line="561" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#29547#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/BlockingQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1455">
+          <caret line="131" column="32" selection-start-line="131" selection-start-column="19" selection-end-line="131" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/ConcurrentLinkedQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#30079#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/ScheduledThreadPoolExecutor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/RejectedExecutionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#1335#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/locks/ReentrantReadWriteLock.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5160">
@@ -543,10 +631,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9585">
           <caret line="681" column="6" lean-forward="true" selection-start-line="681" selection-start-column="6" selection-end-line="681" selection-end-column="6" />
-          <folding>
-            <element signature="e#20926#20927#0" expanded="true" />
-            <element signature="e#20977#20978#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -554,9 +638,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6150">
           <caret line="455" column="18" selection-start-line="455" selection-start-column="13" selection-end-line="455" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#29238#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -575,22 +656,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/locks/Lock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#14222#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/locks/ReadWriteLock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#4972#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/ThreadPoolExecutor.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -599,37 +668,13 @@
           <folding>
             <element signature="e#17357#17358#0" expanded="true" />
             <element signature="e#17385#17386#0" expanded="true" />
-            <element signature="e#17517#17518#0" expanded="true" />
-            <element signature="e#17546#17547#0" expanded="true" />
-            <element signature="e#17641#17642#0" expanded="true" />
-            <element signature="e#17676#17677#0" expanded="true" />
-            <element signature="e#17829#17830#0" expanded="true" />
-            <element signature="e#17889#17890#0" expanded="true" />
-            <element signature="e#18068#18069#0" expanded="true" />
-            <element signature="e#18128#18129#0" expanded="true" />
+            <element signature="e#17531#17532#0" expanded="true" />
+            <element signature="e#17560#17561#0" expanded="true" />
             <element signature="e#20404#20412#0" expanded="true" />
-            <element signature="e#33560#33561#0" expanded="true" />
-            <element signature="e#33616#33617#0" expanded="true" />
-            <element signature="e#64909#64910#0" expanded="true" />
-            <element signature="e#64954#64955#0" expanded="true" />
-            <element signature="e#65639#65640#0" expanded="true" />
-            <element signature="e#65700#65701#0" expanded="true" />
-            <element signature="e#66413#66414#0" expanded="true" />
-            <element signature="e#66439#66440#0" expanded="true" />
-            <element signature="e#67063#67064#0" expanded="true" />
-            <element signature="e#67099#67100#0" expanded="true" />
-            <element signature="e#67727#67728#0" expanded="true" />
-            <element signature="e#67757#67758#0" expanded="true" />
-            <element signature="e#69252#69253#0" expanded="true" />
-            <element signature="e#69287#69288#0" expanded="true" />
-            <element signature="e#71087#71088#0" expanded="true" />
-            <element signature="e#71132#71133#0" expanded="true" />
-            <element signature="e#73399#73400#0" expanded="true" />
-            <element signature="e#73437#73438#0" expanded="true" />
-            <element signature="e#75042#75043#0" expanded="true" />
-            <element signature="e#75114#75115#0" expanded="true" />
-            <element signature="e#75511#75512#0" expanded="true" />
-            <element signature="e#75543#75544#0" expanded="true" />
+            <element signature="e#33646#33647#0" expanded="true" />
+            <element signature="e#33689#33690#0" expanded="true" />
+            <element signature="e#67568#67569#0" expanded="true" />
+            <element signature="e#67613#67614#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -649,13 +694,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/locks/Lock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#14222#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/locks/AbstractQueuedLongSynchronizer.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -665,13 +704,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/locks/ReadWriteLock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#4972#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/CountDownLatch.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -698,10 +731,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9585">
           <caret line="681" column="6" selection-start-line="681" selection-start-column="6" selection-end-line="681" selection-end-column="6" />
-          <folding>
-            <element signature="e#20926#20927#0" expanded="true" />
-            <element signature="e#20977#20978#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -716,15 +745,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6150">
           <caret line="455" column="18" selection-start-line="455" selection-start-column="13" selection-end-line="455" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#29238#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/ScheduledThreadPoolExecutor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
+        <state relative-caret-position="225">
           <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
         </state>
       </provider>
@@ -749,7 +775,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/BlockingQueue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
+        <state relative-caret-position="1455">
           <caret line="131" column="32" selection-start-line="131" selection-start-column="19" selection-end-line="131" selection-end-column="32" />
         </state>
       </provider>
@@ -763,11 +789,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/ThreadFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-482">
-          <folding>
-            <element signature="e#0#1467#0" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-482" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/Executor.java">
@@ -790,26 +812,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/ExecutorService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3788">
-          <folding>
-            <element signature="e#0#14689#0" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-3788" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/AbstractExecutorService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1509">
           <caret line="165" column="21" lean-forward="true" selection-start-line="165" selection-start-column="21" selection-end-line="165" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#10163#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/Executors.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
+        <state relative-caret-position="7740">
           <caret line="561" column="8" selection-start-line="561" selection-start-column="8" selection-end-line="561" selection-end-column="8" />
           <folding>
             <element signature="e#0#29547#0" expanded="true" />
@@ -819,42 +834,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/ThreadPoolExecutor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="1163" column="50" selection-start-line="1163" selection-start-column="50" selection-end-line="1163" selection-end-column="50" />
+        <state relative-caret-position="184">
+          <caret line="711" column="24" selection-start-line="711" selection-start-column="16" selection-end-line="711" selection-end-column="24" />
           <folding>
             <element signature="e#17357#17358#0" expanded="true" />
             <element signature="e#17385#17386#0" expanded="true" />
-            <element signature="e#17517#17518#0" expanded="true" />
-            <element signature="e#17546#17547#0" expanded="true" />
-            <element signature="e#17641#17642#0" expanded="true" />
-            <element signature="e#17676#17677#0" expanded="true" />
-            <element signature="e#17829#17830#0" expanded="true" />
-            <element signature="e#17889#17890#0" expanded="true" />
-            <element signature="e#18068#18069#0" expanded="true" />
-            <element signature="e#18128#18129#0" expanded="true" />
+            <element signature="e#17531#17532#0" expanded="true" />
+            <element signature="e#17560#17561#0" expanded="true" />
             <element signature="e#20404#20412#0" expanded="true" />
-            <element signature="e#33560#33561#0" expanded="true" />
-            <element signature="e#33616#33617#0" expanded="true" />
-            <element signature="e#64909#64910#0" expanded="true" />
-            <element signature="e#64954#64955#0" expanded="true" />
-            <element signature="e#65639#65640#0" expanded="true" />
-            <element signature="e#65700#65701#0" expanded="true" />
-            <element signature="e#66413#66414#0" expanded="true" />
-            <element signature="e#66439#66440#0" expanded="true" />
-            <element signature="e#67063#67064#0" expanded="true" />
-            <element signature="e#67099#67100#0" expanded="true" />
-            <element signature="e#67727#67728#0" expanded="true" />
-            <element signature="e#67757#67758#0" expanded="true" />
-            <element signature="e#69252#69253#0" expanded="true" />
-            <element signature="e#69287#69288#0" expanded="true" />
-            <element signature="e#71087#71088#0" expanded="true" />
-            <element signature="e#71132#71133#0" expanded="true" />
-            <element signature="e#73399#73400#0" expanded="true" />
-            <element signature="e#73437#73438#0" expanded="true" />
-            <element signature="e#75042#75043#0" expanded="true" />
-            <element signature="e#75114#75115#0" expanded="true" />
-            <element signature="e#75511#75512#0" expanded="true" />
-            <element signature="e#75543#75544#0" expanded="true" />
+            <element signature="e#33646#33647#0" expanded="true" />
+            <element signature="e#33689#33690#0" expanded="true" />
+            <element signature="e#67568#67569#0" expanded="true" />
+            <element signature="e#67613#67614#0" expanded="true" />
           </folding>
         </state>
       </provider>

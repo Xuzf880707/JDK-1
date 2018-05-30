@@ -729,6 +729,13 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
      * @param targetState the desired state, either SHUTDOWN or STOP
      *        (but not TIDYING or TERMINATED -- use tryTerminate for that)
      */
+    /***
+     * 更新线程池状态，如果线程池的状态大于targetState，则不用更新
+     *      runStateAtLeast(c, targetState)：比较当前线程池的状态是否大于目标状态targetState
+     *      ctlOf(targetState, workerCountOf(c))：获得线程池的值
+     *      ctl.compareAndSet：cas来更新线程池状态
+     * @param targetState
+     */
     private void advanceRunState(int targetState) {
         for (;;) {
             int c = ctl.get();
@@ -1600,6 +1607,13 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
      *
      * @throws SecurityException {@inheritDoc}
      */
+    /***
+     * 1、检查关闭权限
+     * 2、更新线程池状态为SHUTDOWN，线程池状态只能降，不能升
+     * 3、像所有的线程worker发送中断请求
+     * 4、如果有定时任务，取消定时任务(ScheduledThreadPoolExecutor会重写onShutdown)
+     * 5、尝试终止线程池
+     */
     public void shutdown() {
         final ReentrantLock mainLock = this.mainLock;
         mainLock.lock();
@@ -1630,6 +1644,12 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
      * fails to respond to interrupts may never terminate.
      *
      * @throws SecurityException {@inheritDoc}
+     */
+    /***
+     * 1、检查关闭权限
+     * 2、更新线程池状态为STOP，线程池状态只能降，不能升
+     * 3、直接像所有的工作线程worker发出中断请求
+     * 4、移除线程池中所有的队列
      */
     public List<Runnable> shutdownNow() {
         List<Runnable> tasks;
