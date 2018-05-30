@@ -31,8 +31,8 @@
       <file leaf-file-name="ThreadPoolExecutor.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/ThreadPoolExecutor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="711" column="24" selection-start-line="711" selection-start-column="16" selection-end-line="711" selection-end-column="24" />
+            <state relative-caret-position="276">
+              <caret line="1348" column="70" selection-start-line="1348" selection-start-column="70" selection-end-line="1348" selection-end-column="70" />
               <folding>
                 <element signature="e#17357#17358#0" expanded="true" />
                 <element signature="e#17385#17386#0" expanded="true" />
@@ -336,7 +336,7 @@
       <workItem from="1525832536644" duration="1536000" />
       <workItem from="1525917992652" duration="22781000" />
       <workItem from="1526858243611" duration="24595000" />
-      <workItem from="1527604238809" duration="1422000" />
+      <workItem from="1527604238809" duration="2300000" />
     </task>
     <task id="LOCAL-00001" summary="学习jdk添加中文注释-countdownlatch/ReentrantReadWriteLock/ReentrantLock/AQS">
       <created>1526548969712</created>
@@ -422,11 +422,18 @@
       <option name="project" value="LOCAL" />
       <updated>1527583151067</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="学习jdk添加中文注释-countdownlatch/ReentrantReadWriteLock/ReentrantLock/AQS">
+      <created>1527645590527</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1527645590527</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53253000" />
+    <option name="totallyTimeSpent" value="54131000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="805" extended-state="0" />
@@ -631,6 +638,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9585">
           <caret line="681" column="6" lean-forward="true" selection-start-line="681" selection-start-column="6" selection-end-line="681" selection-end-column="6" />
+          <folding>
+            <element signature="e#20926#20927#0" expanded="true" />
+            <element signature="e#20977#20978#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -731,6 +742,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9585">
           <caret line="681" column="6" selection-start-line="681" selection-start-column="6" selection-end-line="681" selection-end-column="6" />
+          <folding>
+            <element signature="e#20926#20927#0" expanded="true" />
+            <element signature="e#20977#20978#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -812,7 +827,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/ExecutorService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3788" />
+        <state relative-caret-position="-3788">
+          <folding>
+            <element signature="e#0#14689#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/AbstractExecutorService.java">
@@ -834,8 +853,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/ThreadPoolExecutor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="711" column="24" selection-start-line="711" selection-start-column="16" selection-end-line="711" selection-end-column="24" />
+        <state relative-caret-position="276">
+          <caret line="1348" column="70" selection-start-line="1348" selection-start-column="70" selection-end-line="1348" selection-end-column="70" />
           <folding>
             <element signature="e#17357#17358#0" expanded="true" />
             <element signature="e#17385#17386#0" expanded="true" />

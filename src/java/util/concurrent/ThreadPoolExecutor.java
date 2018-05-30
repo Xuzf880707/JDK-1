@@ -827,6 +827,9 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
      * Interrupts all threads, even if active. Ignores SecurityExceptions
      * (in which case some threads may remain uninterrupted).
      */
+    /***
+     * 向所有非线程发出中断信息(包括空闲和非空闲的线程)
+     */
     private void interruptWorkers() {
         final ReentrantLock mainLock = this.mainLock;
         mainLock.lock();
@@ -856,6 +859,14 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
      * interrupt only one idle worker, but shutdown() interrupts all
      * idle workers so that redundant workers exit promptly, not
      * waiting for a straggler task to finish.
+     */
+    /***
+     * 中断线程，这里只会中断的是空闲的线程
+     *      如果一个worker线程在运行非空闲的话，则w.tryLock()==false,这就是为什么线程在运行后的时候要lock
+     *  总结 ：
+     *      当onlyOne=true时，这里可能不会中断任何线程
+     *      当onlyOne=false时，这里只会中断所有空闲的线程，非空闲的线程不会被中断
+     * @param onlyOne 是否只尝试中断一个空闲线程
      */
     private void interruptIdleWorkers(boolean onlyOne) {
         final ReentrantLock mainLock = this.mainLock;
@@ -926,6 +937,10 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
      * drainTo. But if the queue is a DelayQueue or any other kind of
      * queue for which poll or drainTo may fail to remove some
      * elements, it deletes them one by one.
+     */
+    /***
+     * 移除队列中的等待任务，返回被移除的任务列表
+     * @return
      */
     private List<Runnable> drainQueue() {
         BlockingQueue<Runnable> q = workQueue;
@@ -1331,7 +1346,7 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
              * 如果worker的firstTask为空，那么就应该通过getTask去队列中拿取任务
              */
             while (task != null || (task = getTask()) != null) {//如果有可被worker执行的task任务
-                w.lock();
+                w.lock();//这边加锁是为了搞死线程池，我现在不是非空闲的，这样在shutdown()时就不会被中断
                 // If pool is stopping, ensure thread is interrupted;
                 // if not, ensure thread is not interrupted.  This
                 // requires a recheck in second case to deal with
@@ -1610,7 +1625,7 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
     /***
      * 1、检查关闭权限
      * 2、更新线程池状态为SHUTDOWN，线程池状态只能降，不能升
-     * 3、像所有的线程worker发送中断请求
+     * 3、向所有的空闲的线程worker发送中断请求（它只中断空闲线程）
      * 4、如果有定时任务，取消定时任务(ScheduledThreadPoolExecutor会重写onShutdown)
      * 5、尝试终止线程池
      */
@@ -1648,7 +1663,7 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
     /***
      * 1、检查关闭权限
      * 2、更新线程池状态为STOP，线程池状态只能降，不能升
-     * 3、直接像所有的工作线程worker发出中断请求
+     * 3、直接向所有的工作线程worker发出中断请求(包括空闲和非空闲的)
      * 4、移除线程池中所有的队列
      */
     public List<Runnable> shutdownNow() {
