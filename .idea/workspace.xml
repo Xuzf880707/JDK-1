@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="eff3db11-78fa-40ca-8c05-ebc15269d269" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/util/ArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/util/ArrayList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/util/Arrays.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/util/Arrays.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java/util/HashMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/util/HashMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/util/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/util/LinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/util/concurrent/locks/AbstractQueuedSynchronizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/util/concurrent/locks/AbstractQueuedSynchronizer.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,100 +30,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ThreadPoolExecutor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/ThreadPoolExecutor.java">
+      <file leaf-file-name="Arrays.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/util/Arrays.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19365">
-              <caret line="1348" column="70" selection-start-line="1348" selection-start-column="70" selection-end-line="1348" selection-end-column="70" />
-              <folding>
-                <element signature="e#17357#17358#0" expanded="true" />
-                <element signature="e#17385#17386#0" expanded="true" />
-                <element signature="e#17531#17532#0" expanded="true" />
-                <element signature="e#17560#17561#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="41505">
+              <caret line="2820" column="13" selection-start-line="2820" selection-start-column="13" selection-end-line="2820" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AbstractQueuedSynchronizer.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/locks/AbstractQueuedSynchronizer.java">
+      <file leaf-file-name="ArrayList.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/util/ArrayList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2993">
-              <caret line="444" selection-start-line="444" selection-end-line="444" />
+            <state relative-caret-position="20066">
+              <caret line="1391" lean-forward="true" selection-start-line="1391" selection-end-line="1391" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HashMap.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HashMap.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/java/util/HashMap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="55" column="21" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
+            <state relative-caret-position="106">
+              <caret line="399" column="34" lean-forward="true" selection-start-line="399" selection-start-column="34" selection-end-line="399" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TimeoutException.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/TimeoutException.java">
+      <file leaf-file-name="AbstractList.java" pinned="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/src.zip!/java/util/AbstractList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#1277#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Executor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/Executor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#3753#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Executors.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/Executors.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7740">
-              <caret line="561" column="8" selection-start-line="561" selection-start-column="8" selection-end-line="561" selection-end-column="8" />
-              <folding>
-                <element signature="e#0#29547#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BlockingQueue.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/BlockingQueue.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1455">
-              <caret line="131" column="32" selection-start-line="131" selection-start-column="19" selection-end-line="131" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ConcurrentLinkedQueue.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/ConcurrentLinkedQueue.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#30079#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RejectedExecutionHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/RejectedExecutionHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#1335#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="705">
+              <caret line="70" column="22" selection-start-line="70" selection-start-column="22" selection-end-line="70" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -132,14 +70,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>doReleaseShared</find>
-      <find>tryReleaseShared</find>
-      <find>release(</find>
-      <find>Size</find>
-      <find>tryRelease</find>
-      <find>mainLock</find>
-      <find>poll(</find>
-      <find>allowCoreThreadTimeOut</find>
       <find>runStateAtLeast(ctl.get(), STOP)</find>
       <find>get</find>
       <find>beforeExecute</find>
@@ -161,6 +91,14 @@
       <find>Linkedlist</find>
       <find>put</find>
       <find>add</find>
+      <find>ArrayList</find>
+      <find>toArrat</find>
+      <find>toArray()</find>
+      <find>toArray</find>
+      <find>to</find>
+      <find>grow()</find>
+      <find>add(</find>
+      <find>newCapacity</find>
       <find>put(</find>
     </findStrings>
     <replaceStrings>
@@ -179,8 +117,10 @@
         <option value="$PROJECT_DIR$/src/java/util/concurrent/locks/ReentrantReadWriteLock.java" />
         <option value="$PROJECT_DIR$/src/java/util/concurrent/ThreadPoolExecutor.java" />
         <option value="$PROJECT_DIR$/src/java/util/LinkedList.java" />
-        <option value="$PROJECT_DIR$/src/java/util/HashMap.java" />
         <option value="$PROJECT_DIR$/src/java/util/concurrent/locks/AbstractQueuedSynchronizer.java" />
+        <option value="$PROJECT_DIR$/src/java/util/Arrays.java" />
+        <option value="$PROJECT_DIR$/src/java/util/HashMap.java" />
+        <option value="$PROJECT_DIR$/src/java/util/ArrayList.java" />
       </list>
     </option>
   </component>
@@ -204,10 +144,11 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="805" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-254" />
+    <option name="y" value="-1057" />
+    <option name="width" value="1920" />
+    <option name="height" value="1057" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -215,6 +156,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -242,23 +186,6 @@
             </path>
             <path>
               <item name="JDK-1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JDK-1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-              <item name="concurrent" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JDK-1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JDK-1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-              <item name="concurrent" type="462c0819:PsiDirectoryNode" />
-              <item name="locks" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JDK-1" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
             <path>
@@ -272,17 +199,21 @@
               <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
               <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="JDK-1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="HashM&#9;FILE&#9;file:///Users/hb/Documents/study/JDK-1/src/java/util/HashMap.java&#10;abs&#9;FILE&#9;file:///Users/hb/Documents/study/JDK-1/src/java/util/concurrent/locks/AbstractQueuedSynchronizer.java&#10;Hash&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/src.zip!/java/util/HashMap.java&#10;HashMap&#9;FILE&#9;file:///Users/hb/Documents/study/JDK-1/src/java/util/HashMap.java&#10;Hashmap&#9;PSI&#9;JAVA://java.util.HashMap&#10;LinkedList&#9;PSI&#9;JAVA://java.util.LinkedList&#10;Worker&#9;PSI&#9;JAVA://java.util.concurrent.ThreadPoolExecutor.Worker&#10;Integer&#9;FILE&#9;file:///Users/hb/Documents/study/JDK-1/src/java/lang/Integer.java&#10;Threadpoole&#9;FILE&#9;file:///Users/hb/Documents/study/JDK-1/src/java/util/concurrent/ThreadPoolExecutor.java&#10;ReentrantReadWriteLock&#9;FILE&#9;file:///Users/hb/Documents/study/JDK-1/src/java/util/concurrent/locks/ReentrantReadWriteLock.java" />
+    <property name="SearchEverywhereHistoryKey" value="AbstractList&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/src.zip!/java/util/AbstractList.java&#10;Hash&#9;FILE&#9;file:///Users/hb/Documents/study/source_code/JDK-1/src/java/util/HashMap.java&#10;ArrayList&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/src.zip!/java/util/ArrayList.java&#10;HashM&#9;FILE&#9;file:///Users/hb/Documents/study/JDK-1/src/java/util/HashMap.java&#10;abs&#9;FILE&#9;file:///Users/hb/Documents/study/JDK-1/src/java/util/concurrent/locks/AbstractQueuedSynchronizer.java&#10;HashMap&#9;FILE&#9;file:///Users/hb/Documents/study/JDK-1/src/java/util/HashMap.java&#10;Hashmap&#9;PSI&#9;JAVA://java.util.HashMap&#10;LinkedList&#9;PSI&#9;JAVA://java.util.LinkedList&#10;Worker&#9;PSI&#9;JAVA://java.util.concurrent.ThreadPoolExecutor.Worker&#10;Integer&#9;FILE&#9;file:///Users/hb/Documents/study/JDK-1/src/java/lang/Integer.java&#10;Threadpoole&#9;FILE&#9;file:///Users/hb/Documents/study/JDK-1/src/java/util/concurrent/ThreadPoolExecutor.java&#10;ReentrantReadWriteLock&#9;FILE&#9;file:///Users/hb/Documents/study/JDK-1/src/java/util/concurrent/locks/ReentrantReadWriteLock.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -372,7 +303,9 @@
       <workItem from="1528787291719" duration="1421000" />
       <workItem from="1532570922881" duration="1151000" />
       <workItem from="1532826276314" duration="597000" />
-      <workItem from="1551151228588" duration="538000" />
+      <workItem from="1551151228588" duration="1235000" />
+      <workItem from="1551156053436" duration="3443000" />
+      <workItem from="1551160943396" duration="1790000" />
     </task>
     <task id="LOCAL-00001" summary="学习jdk添加中文注释-countdownlatch/ReentrantReadWriteLock/ReentrantLock/AQS">
       <created>1526548969712</created>
@@ -472,14 +405,21 @@
       <option name="project" value="LOCAL" />
       <updated>1527646240782</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="学习jdk添加中文注释-countdownlatch/ReentrantReadWriteLock/ReentrantLock/AQS">
+      <created>1551152185653</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1551152185653</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64498000" />
+    <option name="totallyTimeSpent" value="70428000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="805" extended-state="0" />
+    <frame x="-254" y="-1057" width="1920" height="1057" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -495,7 +435,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32880434" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25035766" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23269436" />
       <window_info anchor="bottom" id="Tail" order="7" />
       <window_info anchor="right" id="Database" order="3" weight="0.3297568" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -517,25 +457,25 @@
       <window_info anchor="bottom" id="Tail" order="7" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Version Control" order="11" visible="true" weight="0.20323014" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32909605" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24320458" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24964234" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32909605" />
       <window_info anchor="right" id="Database" order="6" weight="0.3297568" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32880434" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="11" visible="true" weight="0.20323014" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info id="Capture Tool" order="5" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -585,51 +525,31 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/locks/AbstractQueuedSynchronizer.java">
+    <entry file="file://$PROJECT_DIR$/src/java/util/Arrays.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15225">
-          <caret line="1015" column="22" selection-start-line="1015" selection-start-column="22" selection-end-line="1015" selection-end-column="22" />
+        <state relative-caret-position="41505">
+          <caret line="2820" column="13" lean-forward="true" selection-start-line="2820" selection-start-column="13" selection-end-line="2820" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/ThreadPoolExecutor.java">
+    <entry file="file://$PROJECT_DIR$/src/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19365">
-          <caret line="1348" column="70" selection-start-line="1348" selection-start-column="70" selection-end-line="1348" selection-end-column="70" />
-          <folding>
-            <element signature="e#17357#17358#0" expanded="true" />
-            <element signature="e#17385#17386#0" expanded="true" />
-            <element signature="e#17531#17532#0" expanded="true" />
-            <element signature="e#17560#17561#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="6585">
+          <caret line="472" column="30" lean-forward="true" selection-start-line="472" selection-start-column="30" selection-end-line="472" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/TimeoutException.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/src.zip!/java/util/AbstractList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#1277#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="705">
+          <caret line="70" column="22" selection-start-line="70" selection-start-column="22" selection-end-line="70" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/Executor.java">
+    <entry file="file://$PROJECT_DIR$/src/java/util/HashMap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#3753#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/Executors.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7620">
-          <caret line="561" column="8" selection-start-line="561" selection-start-column="8" selection-end-line="561" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#29547#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="5025">
+          <caret line="362" column="14" lean-forward="true" selection-start-line="362" selection-start-column="14" selection-end-line="362" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -640,28 +560,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/ConcurrentLinkedQueue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#30079#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/ScheduledThreadPoolExecutor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/RejectedExecutionHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#1335#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -676,30 +578,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34440">
           <caret line="2296" column="11" lean-forward="true" selection-start-line="2296" selection-start-column="11" selection-end-line="2296" selection-end-column="11" />
-          <folding>
-            <element signature="e#17357#17358#0" expanded="true" />
-            <element signature="e#17385#17386#0" expanded="true" />
-            <element signature="e#17531#17532#0" expanded="true" />
-            <element signature="e#17560#17561#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/TimeoutException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#1277#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/Executor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#3753#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -707,9 +585,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7740">
           <caret line="561" column="8" selection-start-line="561" selection-start-column="8" selection-end-line="561" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#29547#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -720,28 +595,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/ConcurrentLinkedQueue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#30079#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/ScheduledThreadPoolExecutor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/RejectedExecutionHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#1335#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -791,12 +648,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15600">
           <caret line="1097" column="36" selection-start-line="1097" selection-start-column="14" selection-end-line="1097" selection-end-column="36" />
-          <folding>
-            <element signature="e#17357#17358#0" expanded="true" />
-            <element signature="e#17385#17386#0" expanded="true" />
-            <element signature="e#17531#17532#0" expanded="true" />
-            <element signature="e#17560#17561#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -863,24 +714,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/RejectedExecutionHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#1335#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/ConcurrentLinkedQueue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#30079#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/BlockingQueue.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1455">
@@ -900,24 +733,6 @@
         <state relative-caret-position="-482" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/Executor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#3753#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/TimeoutException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#1277#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/ExecutorService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3788" />
@@ -934,9 +749,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7740">
           <caret line="561" column="8" selection-start-line="561" selection-start-column="8" selection-end-line="561" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#29547#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -944,12 +756,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19365">
           <caret line="1348" column="70" selection-start-line="1348" selection-start-column="70" selection-end-line="1348" selection-end-column="70" />
-          <folding>
-            <element signature="e#17357#17358#0" expanded="true" />
-            <element signature="e#17385#17386#0" expanded="true" />
-            <element signature="e#17531#17532#0" expanded="true" />
-            <element signature="e#17560#17561#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -981,17 +787,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/util/HashMap.java">
+    <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/locks/AbstractQueuedSynchronizer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="55" column="21" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
+        <state relative-caret-position="308">
+          <caret line="265" column="2" lean-forward="true" selection-start-line="265" selection-start-column="2" selection-end-line="265" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/locks/AbstractQueuedSynchronizer.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/src.zip!/java/util/Arrays.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2993">
-          <caret line="444" selection-start-line="444" selection-end-line="444" />
+        <state relative-caret-position="274">
+          <caret line="3809" column="7" lean-forward="true" selection-start-line="3809" selection-start-column="7" selection-end-line="3809" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="111" column="7" lean-forward="true" selection-start-line="111" selection-start-column="7" selection-end-line="111" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/util/Arrays.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="41505">
+          <caret line="2820" column="13" selection-start-line="2820" selection-start-column="13" selection-end-line="2820" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/src.zip!/java/util/AbstractList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="70" column="22" selection-start-line="70" selection-start-column="22" selection-end-line="70" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20066">
+          <caret line="1391" lean-forward="true" selection-start-line="1391" selection-end-line="1391" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/util/HashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="399" column="34" lean-forward="true" selection-start-line="399" selection-start-column="34" selection-end-line="399" selection-end-column="34" />
         </state>
       </provider>
     </entry>

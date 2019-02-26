@@ -2823,6 +2823,12 @@ public class Arrays {
      * @param a the array by which the list will be backed
      * @return a list view of the specified array
      */
+    /**
+     * 这里的ArrayList是一个Arrays的内部类，不能改变数组大小
+     * @param a
+     * @param <T>
+     * @return
+     */
     @SafeVarargs
     public static <T> List<T> asList(T... a) {
         return new ArrayList<>(a);
@@ -2831,10 +2837,15 @@ public class Arrays {
     /**
      * @serial include
      */
+    /**
+     * 注意，这里的ArrayList是一个Arrays的内部类
+     * @param <E>
+     */
     private static class ArrayList<E> extends AbstractList<E>
         implements RandomAccess, java.io.Serializable
     {
         private static final long serialVersionUID = -2764017481108945198L;
+        //final修饰不准修改其引用
         private final E[] a;
 
         ArrayList(E[] array) {
