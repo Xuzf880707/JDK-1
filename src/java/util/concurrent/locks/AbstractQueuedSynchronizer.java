@@ -300,10 +300,10 @@ public abstract class AbstractQueuedSynchronizer
 
     /**
      * Wait queue node class.
-     *
+     *等待的队列是一个锁队列的变量，通常这个锁采用的是自旋锁
      * <p>The wait queue is a variant of a "CLH" (Craig, Landin, and
      * Hagersten) lock queue. CLH locks are normally used for
-     * spinlocks.  We instead use them for blocking synchronizers, but
+         * spinlocks（自旋锁）.  We instead use them for blocking synchronizers, but
      * use the same basic tactic of holding some of the control
      * information about a thread in the predecessor of its node.  A
      * "status" field in each node keeps track of whether a thread
@@ -380,18 +380,17 @@ public abstract class AbstractQueuedSynchronizer
     static final class Node {
         /** Marker to indicate a node is waiting in shared mode */
         static final Node SHARED = new Node();
-        /** Marker to indicate a node is waiting in exclusive mode */
+        /** 标注这个好节点是因为等待独占锁而阻塞 */
         static final Node EXCLUSIVE = null;
 
-        /** waitStatus value to indicate thread has cancelled */
+        /** 该值表明线程被取消掉 **/
         static final int CANCELLED =  1;
-        /** waitStatus value to indicate successor's thread needs unparking */
+        /** 该值表明后继的线程需要被唤醒*/
         static final int SIGNAL    = -1;
-        /** waitStatus value to indicate thread is waiting on condition */
+        /** 该值表明线程在等待一个condition*/
         static final int CONDITION = -2;
         /**
-         * waitStatus value to indicate the next acquireShared should
-         * unconditionally propagate
+         * 该值表明下一个请求共享锁应该被无条件传播
          */
         static final int PROPAGATE = -3;
 
@@ -479,6 +478,7 @@ public abstract class AbstractQueuedSynchronizer
 
         /**
          * Returns true if node is waiting in shared mode
+         * 判断节点是否是等待共享锁
          */
         final boolean isShared() {
             return nextWaiter == SHARED;

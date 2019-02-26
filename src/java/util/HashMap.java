@@ -493,7 +493,7 @@ public class HashMap<K,V>
         }
         if (key == null)
             return putForNullKey(value);
-        int hash = hash(key);
+        int hash = hash(key);//计算出HASh
         int i = indexFor(hash, table.length);
         for (Entry<K,V> e = table[i]; e != null; e = e.next) {
             Object k;

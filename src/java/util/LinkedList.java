@@ -401,18 +401,18 @@ public class LinkedList<E>
      * @throws NullPointerException if the specified collection is null
      */
     public boolean addAll(int index, Collection<? extends E> c) {
-        checkPositionIndex(index);
+        checkPositionIndex(index);//检查索引是否数组越界
 
         Object[] a = c.toArray();
-        int numNew = a.length;
+        int numNew = a.length;//获取新增集合的长度
         if (numNew == 0)
             return false;
 
         Node<E> pred, succ;
-        if (index == size) {
+        if (index == size) {//如果是从添加到最后的话
             succ = null;
             pred = last;
-        } else {
+        } else {//添加到中间索引之后的
             succ = node(index);
             pred = succ.prev;
         }
