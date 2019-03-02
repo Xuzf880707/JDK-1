@@ -112,9 +112,10 @@ public class TreeMap<K,V>
      * null if it uses the natural ordering of its keys.
      *
      * @serial
+     * treeMap中排序使用的比较器
      */
     private final Comparator<? super K> comparator;
-
+    //根结点
     private transient Entry<K,V> root = null;
 
     /**
@@ -526,32 +527,38 @@ public class TreeMap<K,V>
      *         does not permit null keys
      */
     public V put(K key, V value) {
+        //t表示当前节点，从根结点开始遍历比较
         Entry<K,V> t = root;
+        //如果是空树，则新增KV形成的节点是根结点
         if (t == null) {
+            //红黑树的排序是根据key进行比较。这一步用来验证key是否可以进行比较
             compare(key, key); // type (and possibly null) check
-
+            //使用KV构造出新的entry对象，第三个参数是parent,根节点没有父节点
             root = new Entry<>(key, value, null);
             size = 1;
             modCount++;
             return null;
         }
-        int cmp;
+        int cmp;//用来接收比较结果
         Entry<K,V> parent;
         // split comparator and comparable paths
         Comparator<? super K> cpr = comparator;
         if (cpr != null) {
             do {
-                parent = t;
+                parent = t;//将当前节点赋值给父节点，故从根节点开始遍历
+                //比较输入的参数key和当前节点key的大小
                 cmp = cpr.compare(key, t.key);
+                //参数的key更小，所以往左节点继续走
                 if (cmp < 0)
                     t = t.left;
+                //参数的key更大，则往右节点继续走
                 else if (cmp > 0)
-                    t = t.right;
-                else
+                    t = t.right;//继续右遍历
+                else//如果相等，则会残忍的覆盖当前节点的value,并返回更新前的值
                     return t.setValue(value);
             } while (t != null);
         }
-        else {
+        else {//如果没有指定比较器的话，则使用自然排序的compareTo方法
             if (key == null)
                 throw new NullPointerException();
             Comparable<? super K> k = (Comparable<? super K>) key;
@@ -566,11 +573,13 @@ public class TreeMap<K,V>
                     return t.setValue(value);
             } while (t != null);
         }
+        //创建Entry参数，并把parent置入参数
         Entry<K,V> e = new Entry<>(key, value, parent);
         if (cmp < 0)
-            parent.left = e;
+            parent.left = e;//如果比parent小，则成为左孩子
         else
-            parent.right = e;
+            parent.right = e;//如果比parent大，则成为右孩子
+        //还需要对这个新节点进行重新着色和旋转操作，以达到平衡
         fixAfterInsertion(e);
         size++;
         modCount++;
@@ -1184,6 +1193,7 @@ public class TreeMap<K,V>
     /**
      * Compares two keys using the correct comparison method for this TreeMap.
      */
+    //如果定义了comparator，则根据comparator进行比较，不然就根据key1的自然实现接口Comparable进行比较
     final int compare(Object k1, Object k2) {
         return comparator==null ? ((Comparable<? super K>)k1).compareTo((K)k2)
             : comparator.compare((K)k1, (K)k2);
@@ -1885,13 +1895,18 @@ public class TreeMap<K,V>
      * Node in the Tree.  Doubles as a means to pass key-value pairs back to
      * user (see Map.Entry).
      */
-
+    /***
+     * TreeMap的内部类，存储红黑树节点的载体类
+     * @param <K>
+     * @param <V>
+     */
     static final class Entry<K,V> implements Map.Entry<K,V> {
         K key;
         V value;
         Entry<K,V> left = null;
         Entry<K,V> right = null;
         Entry<K,V> parent;
+        //节点颜色信息，默认是黑色
         boolean color = BLACK;
 
         /**
@@ -2031,7 +2046,7 @@ public class TreeMap<K,V>
      * are used to avoid messiness surrounding nullness checks in the main
      * algorithms.
      */
-
+    //p==null时返回的都是黑色
     private static <K,V> boolean colorOf(Entry<K,V> p) {
         return (p == null ? BLACK : p.color);
     }
@@ -2054,25 +2069,40 @@ public class TreeMap<K,V>
     }
 
     /** From CLR */
+    /***
+     * 左旋转
+     * @param p
+     */
     private void rotateLeft(Entry<K,V> p) {
+        //如果参数节点不是null节点
         if (p != null) {
+            //获取p的右子节点r
             Entry<K,V> r = p.right;
+            //将r的左子树设置为p的右子树
             p.right = r.left;
+            //若r的左子树为空，则将p设置r左子树的父亲
             if (r.left != null)
                 r.left.parent = p;
+            //将p的父亲设置为r的父亲
             r.parent = p.parent;
+            //无论如何，r都要在p父亲心目中替代p的位置
             if (p.parent == null)
                 root = r;
             else if (p.parent.left == p)
                 p.parent.left = r;
             else
                 p.parent.right = r;
+            //将p设置为r的左子树
             r.left = p;
             p.parent = r;
         }
     }
 
     /** From CLR */
+    /***
+     * 右旋的道理是一样的
+     * @param p
+     */
     private void rotateRight(Entry<K,V> p) {
         if (p != null) {
             Entry<K,V> l = p.left;
@@ -2090,27 +2120,42 @@ public class TreeMap<K,V>
     }
 
     /** From CLR */
+    /***
+     * 重新着色和自旋转
+     * @param x
+     *
+     * 调整后的根结点必须是黑色
+     * 叶子节点可能是黑色的，也可能是红色的，但是叶子节点下挂的两个虚节点必须是黑色的
+     */
     private void fixAfterInsertion(Entry<K,V> x) {
+        //虽然内部类的Entry默认的颜色是黑色，但是新节点一律着色为红色
         x.color = RED;
-
+        //新节点是根节点，或者其父节点为黑色，则满足红黑色的性质，无须调整
+        //x值的改变是用红色高亮表示，改变的过程是不断向上游遍历（或内部调整），直到父节点是黑色，或者到达根结点
+        //如果他的叔叔节点是黑色的，则会进行自旋转，(注意如果叔叔为空，也是返回黑色的)
         while (x != null && x != root && x.parent.color == RED) {
+            //如果父节点是其父节点(或者叫爷爷)的左子节点
             if (parentOf(x) == leftOf(parentOf(parentOf(x)))) {
+                //这个时候查看爷爷的右子节点(简称右叔)的颜色
                 Entry<K,V> y = rightOf(parentOf(parentOf(x)));
+                //如果右叔是红色，此时通过局部颜色调整，就可以使子树满足红黑色的性质
                 if (colorOf(y) == RED) {
-                    setColor(parentOf(x), BLACK);
-                    setColor(y, BLACK);
-                    setColor(parentOf(parentOf(x)), RED);
-                    x = parentOf(parentOf(x));
-                } else {
-                    if (x == rightOf(parentOf(x))) {
+                    setColor(parentOf(x), BLACK);//父节点-->黑
+                    setColor(y, BLACK);//右叔-->黑
+                    setColor(parentOf(parentOf(x)), RED);//爷爷-->红
+                    x = parentOf(parentOf(x));//然后从爷爷开始继续往上游遍历
+                } else {//如果右叔是黑色的，则需要加入旋转
+                    if (x == rightOf(parentOf(x))) {//如果当前节点x是父亲的右子节点，先对父亲做一次左旋转
+                        //对父亲做一次左旋转操作，红色的父亲会沉入其左侧位置，将父亲赋值给x
                         x = parentOf(x);
                         rotateLeft(x);
                     }
+                    //重新着色并对爷爷进行右旋转操作
                     setColor(parentOf(x), BLACK);
-                    setColor(parentOf(parentOf(x)), RED);
+                    setColor(parentOf(parentOf(x)), RED);//
                     rotateRight(parentOf(parentOf(x)));
                 }
-            } else {
+            } else {//如果父亲是右节点，则看左叔的脸色
                 Entry<K,V> y = leftOf(parentOf(parentOf(x)));
                 if (colorOf(y) == RED) {
                     setColor(parentOf(x), BLACK);
