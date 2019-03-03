@@ -800,6 +800,7 @@ public class ConcurrentHashMap<K,V> extends AbstractMap<K,V>
      * but also as a fallback during table initialization
      * races. Updated via CAS.
      */
+    //记录了元素总数量，主要是在无竞争状态下，在总数更新后，通过CAS方式更新这个值
     private transient volatile long baseCount;
 
     /**
@@ -930,6 +931,9 @@ public class ConcurrentHashMap<K,V> extends AbstractMap<K,V>
 
     /**
      * {@inheritDoc}
+     *
+     * 对于元素总数的统计，逻辑就非常简单了，只需要让 baseCount加上各
+     * counterCels 内的数据，就可以得出晗希内的元素总数，整个过程完全不需要借助锁。
      */
     public int size() {
         long n = sumCount();
@@ -2291,9 +2295,12 @@ public class ConcurrentHashMap<K,V> extends AbstractMap<K,V>
      *
      * @param x the count to add
      * @param check if <0, don't check resize, if <= 1 only check if uncontended
+     *
+     *  当更新baseCount冲突，则会认为进入到比较激烈的竞争状态，通过启用counterCells减少竞争，通过CAS的情况下，把总数更新情况记录到counterCells对应的位置上
      */
     private final void addCount(long x, int check) {
         CounterCell[] as; long b, s;
+        //如果counterCells不为空，或者CAS更新失败baseCount失败，则启用counterCells减少竞争
         if ((as = counterCells) != null ||
                 !U.compareAndSwapLong(this, BASECOUNT, b = baseCount, s = b + x)) {
             CounterCell a; long v; int m;
@@ -2309,7 +2316,7 @@ public class ConcurrentHashMap<K,V> extends AbstractMap<K,V>
                 return;
             s = sumCount();
         }
-        if (check >= 0) {
+        if (check >= 0) {//如果更新 counterCells上的某个位置时出现了多次失败， 则会通过扩窑 counterCells 的方式减少冲突。
             Node<K,V>[] tab, nt; int n, sc;
             while (s >= (long)(sc = sizeCtl) && (tab = table) != null &&
                     (n = tab.length) < MAXIMUM_CAPACITY) {
@@ -2325,7 +2332,7 @@ public class ConcurrentHashMap<K,V> extends AbstractMap<K,V>
                 else if (U.compareAndSwapInt(this, SIZECTL, sc,
                         (rs << RESIZE_STAMP_SHIFT) + 2))
                     transfer(tab, null);
-                s = sumCount();
+                s = sumCount();//当 counterCells处在扩容期间时，会尝试更新 baseCount值
             }
         }
     }
@@ -2547,8 +2554,15 @@ public class ConcurrentHashMap<K,V> extends AbstractMap<K,V>
         CounterCell(long x) { value = x; }
     }
 
+    /***
+     * 对于元素总数的统计，逻辑就非常简单了，只需要让 baseCount加上各
+     * counterCels 内的数据，就可以得出晗希内的元素总数，整个过程完全不需要借助锁。
+     * @return
+     */
+
     final long sumCount() {
-        CounterCell[] as = counterCells; CounterCell a;
+        CounterCell[] as = counterCells;
+        CounterCell a;
         long sum = baseCount;
         if (as != null) {
             for (int i = 0; i < as.length; ++i) {
