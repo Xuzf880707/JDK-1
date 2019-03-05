@@ -1434,7 +1434,7 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
      * @param keepAliveTime when the number of threads is greater than
      *        the core, this is the maximum time that excess idle threads
      *        will wait for new tasks before terminating.
-     * @param unit the time unit for the {@code keepAliveTime} argument
+     * @param unit the time unit for the {@code keepAliveTime} argumenWo
      * @param workQueue the queue to use for holding tasks before they are
      *        executed.  This queue will hold only the {@code Runnable}
      *        tasks submitted by the {@code execute} method.
