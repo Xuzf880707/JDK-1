@@ -629,8 +629,14 @@ class Bits {                            // package-private
     // These methods should be called whenever direct memory is allocated or
     // freed.  They allow the user to control the amount of direct memory
     // which a process may access.  All sizes are specified in bytes.
+
+    /***
+     * 查询申请空间
+     * @param size 分配内存大小
+     * @param cap 实际内存大小
+     */
     static void reserveMemory(long size, int cap) {
-        synchronized (Bits.class) {
+        synchronized (Bits.class) {//用一个全局锁
             if (!memoryLimitSet && VM.isBooted()) {
                 maxMemory = VM.maxDirectMemory();
                 memoryLimitSet = true;
@@ -645,7 +651,7 @@ class Bits {                            // package-private
                 return;
             }
         }
-
+        //触发一次System.gc
         System.gc();
         try {
             Thread.sleep(100);

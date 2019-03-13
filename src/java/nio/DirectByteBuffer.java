@@ -114,29 +114,37 @@ class DirectByteBuffer
 
     // Primary constructor
     //
+
+    /***
+     * DirectByteBuffer类的内存里是在堆里申请的，但是通过基类Buffer的capacity，long address两个变量指向堆外的内存，
+     * 如果在程序中创建了DirectByteBuffer类实例A，当A自身没有被引用时，在触发GC回收之前，
+     * jvm把A放在PhantomReference队列里，同时不断扫描PhantomReference队列，
+     * 取出A,触发new Deallocator里的run方法回收堆外直接内存，同时回收A自身的堆内存.
+     * @param cap
+     */
     DirectByteBuffer(int cap) {                   // package-private
 
-        super(-1, 0, cap, cap);
-        boolean pa = VM.isDirectMemoryPageAligned();
-        int ps = Bits.pageSize();
-        long size = Math.max(1L, (long)cap + (pa ? ps : 0));
-        Bits.reserveMemory(size, cap);
+        super(-1, 0, cap, cap);//
+        boolean pa = VM.isDirectMemoryPageAligned();//内存是否按页分配对齐
+        int ps = Bits.pageSize();//获取每页内存大小
+        long size = Math.max(1L, (long)cap + (pa ? ps : 0));//分配内存的大小，如果是按页对齐方式，需要再加一页内存的容量
+        Bits.reserveMemory(size, cap);//用Bits类保存总分配内存(按页分配)的大小和实际内存的大小
 
         long base = 0;
         try {
-            base = unsafe.allocateMemory(size);
+            base = unsafe.allocateMemory(size);//在堆外内存的基地址
         } catch (OutOfMemoryError x) {
             Bits.unreserveMemory(size, cap);
             throw x;
         }
-        unsafe.setMemory(base, size, (byte) 0);
+        unsafe.setMemory(base, size, (byte) 0);//初始化堆外内存的数据为0
         if (pa && (base % ps != 0)) {
             // Round up to page boundary
-            address = base + ps - (base & (ps - 1));
+            address = base + ps - (base & (ps - 1));//计算堆外内存的基地址
         } else {
             address = base;
         }
-        cleaner = Cleaner.create(this, new Deallocator(base, size, cap));
+        cleaner = Cleaner.create(this, new Deallocator(base, size, cap));//释放内存会通过cleaner类操作
         att = null;
 
 

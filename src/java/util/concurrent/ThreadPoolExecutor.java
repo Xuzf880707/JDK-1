@@ -1437,7 +1437,7 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
      * @param unit the time unit for the {@code keepAliveTime} argumenWo
      * @param workQueue the queue to use for holding tasks before they are
      *        executed.  This queue will hold only the {@code Runnable}
-     *        tasks submitted by the {@code execute} method.
+     *        tasks submitted by the {@code execute} method.-
      * @throws IllegalArgumentException if one of the following holds:<br>
      *         {@code corePoolSize < 0}<br>
      *         {@code keepAliveTime < 0}<br>
@@ -1447,7 +1447,7 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
      */
     public ThreadPoolExecutor(int corePoolSize,
                               int maximumPoolSize,
-                              long keepAliveTime,
+                              long keepAliveTime,ThS
                               TimeUnit unit,
                               BlockingQueue<Runnable> workQueue) {
         this(corePoolSize, maximumPoolSize, keepAliveTime, unit, workQueue,

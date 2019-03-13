@@ -6,6 +6,8 @@
     </list>
     <list default="true" id="eff3db11-78fa-40ca-8c05-ebc15269d269" name="Default" comment="学习jdk添加中文注释-countdownlatch/ReentrantReadWriteLock/ReentrantLock/AQS">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/nio/Bits.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/nio/Bits.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/nio/DirectByteBuffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/nio/DirectByteBuffer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java/util/concurrent/ThreadPoolExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/util/concurrent/ThreadPoolExecutor.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -61,17 +63,88 @@
       <file leaf-file-name="ConcurrentHashMap.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/ConcurrentHashMap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
+            <state relative-caret-position="36960">
               <caret line="2556" column="8" selection-start-line="2556" selection-start-column="8" selection-end-line="2556" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ThreadPoolExecutor.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ThreadPoolExecutor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/ThreadPoolExecutor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="1437" column="72" selection-start-line="1437" selection-start-column="72" selection-end-line="1437" selection-end-column="72" />
+            <state relative-caret-position="287">
+              <caret line="1442" column="44" lean-forward="true" selection-start-line="1442" selection-start-column="44" selection-end-line="1442" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DirectByteBuffer.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/java/nio/DirectByteBuffer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="271">
+              <caret line="132" column="22" lean-forward="true" selection-start-line="132" selection-start-column="22" selection-end-line="132" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#27539#0" expanded="true" />
+                <element signature="e#5569#5570#0" expanded="true" />
+                <element signature="e#5599#5600#0" expanded="true" />
+                <element signature="e#5629#5630#0" expanded="true" />
+                <element signature="e#5670#5671#0" expanded="true" />
+                <element signature="e#5695#5696#0" expanded="true" />
+                <element signature="e#5756#5757#0" expanded="true" />
+                <element signature="e#5786#5787#0" expanded="true" />
+                <element signature="e#5846#5847#0" expanded="true" />
+                <element signature="e#9010#9011#0" expanded="true" />
+                <element signature="e#9037#9038#0" expanded="true" />
+                <element signature="e#9072#9073#0" expanded="true" />
+                <element signature="e#9100#9101#0" expanded="true" />
+                <element signature="e#9187#9188#0" expanded="true" />
+                <element signature="e#9281#9282#0" expanded="true" />
+                <element signature="e#9648#9649#0" expanded="true" />
+                <element signature="e#9706#9707#0" expanded="true" />
+                <element signature="e#9740#9741#0" expanded="true" />
+                <element signature="e#9799#9800#0" expanded="true" />
+                <element signature="e#12680#12681#0" expanded="true" />
+                <element signature="e#12739#12740#0" expanded="true" />
+                <element signature="e#12775#12776#0" expanded="true" />
+                <element signature="e#12835#12836#0" expanded="true" />
+                <element signature="e#15723#15724#0" expanded="true" />
+                <element signature="e#15780#15781#0" expanded="true" />
+                <element signature="e#15812#15813#0" expanded="true" />
+                <element signature="e#15870#15871#0" expanded="true" />
+                <element signature="e#18723#18724#0" expanded="true" />
+                <element signature="e#18781#18782#0" expanded="true" />
+                <element signature="e#18815#18816#0" expanded="true" />
+                <element signature="e#18874#18875#0" expanded="true" />
+                <element signature="e#21771#21772#0" expanded="true" />
+                <element signature="e#21830#21831#0" expanded="true" />
+                <element signature="e#21866#21867#0" expanded="true" />
+                <element signature="e#21926#21927#0" expanded="true" />
+                <element signature="e#24873#24874#0" expanded="true" />
+                <element signature="e#24933#24934#0" expanded="true" />
+                <element signature="e#24971#24972#0" expanded="true" />
+                <element signature="e#25032#25033#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Bits.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/nio/Bits.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#23852#0" expanded="true" />
+                <element signature="e#19112#19113#0" expanded="true" />
+                <element signature="e#19183#19184#0" expanded="true" />
+                <element signature="e#19266#19267#0" expanded="true" />
+                <element signature="e#19339#19340#0" expanded="true" />
+                <element signature="e#19430#19431#0" expanded="true" />
+                <element signature="e#19511#19512#0" expanded="true" />
+                <element signature="e#19599#19600#0" expanded="true" />
+                <element signature="e#19681#19682#0" expanded="true" />
+                <element signature="e#19994#19995#0" expanded="true" />
+                <element signature="e#20048#20049#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -80,8 +153,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>threadFactory</find>
-      <find>new</find>
       <find>ThreadPoolExecutor</find>
       <find>factory</find>
       <find>defaultThreadFactory</find>
@@ -110,6 +181,8 @@
       <find>baseCount</find>
       <find>size()</find>
       <find>execute(</find>
+      <find>DirectByteBuffer(int cap)</find>
+      <find>reserveMemory</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -133,6 +206,8 @@
         <option value="$PROJECT_DIR$/src/java/util/TreeMap.java" />
         <option value="$PROJECT_DIR$/src/java/util/concurrent/ConcurrentHashMap.java" />
         <option value="$PROJECT_DIR$/src/java/util/concurrent/ThreadPoolExecutor.java" />
+        <option value="$PROJECT_DIR$/src/java/nio/DirectByteBuffer.java" />
+        <option value="$PROJECT_DIR$/src/java/nio/Bits.java" />
       </list>
     </option>
   </component>
@@ -167,8 +242,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -192,6 +265,13 @@
               <item name="JDK-1" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="nio" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JDK-1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JDK-1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -206,11 +286,13 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="ThreadPoolExecutor&#9;FILE&#9;file:///Users/hb/Documents/study/source_code/JDK-1/src/java/util/concurrent/ThreadPoolExecutor.java&#10;concurr&#9;FILE&#9;file:///Users/hb/Documents/study/source_code/JDK-1/src/java/util/concurrent/ConcurrentHashMap.java&#10;Hash&#9;FILE&#9;file:///Users/hb/Documents/study/source_code/JDK-1/src/java/util/HashMap.java&#10;Tree&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/src.zip!/java/util/TreeMap.java&#10;TreeMap&#9;PSI&#9;JAVA://java.util.TreeMap&#10;AbstractList&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/src.zip!/java/util/AbstractList.java&#10;ArrayList&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/src.zip!/java/util/ArrayList.java&#10;HashM&#9;FILE&#9;file:///Users/hb/Documents/study/JDK-1/src/java/util/HashMap.java&#10;abs&#9;FILE&#9;file:///Users/hb/Documents/study/JDK-1/src/java/util/concurrent/locks/AbstractQueuedSynchronizer.java&#10;HashMap&#9;FILE&#9;file:///Users/hb/Documents/study/JDK-1/src/java/util/HashMap.java&#10;Hashmap&#9;PSI&#9;JAVA://java.util.HashMap&#10;LinkedList&#9;PSI&#9;JAVA://java.util.LinkedList&#10;Worker&#9;PSI&#9;JAVA://java.util.concurrent.ThreadPoolExecutor.Worker&#10;Integer&#9;FILE&#9;file:///Users/hb/Documents/study/JDK-1/src/java/lang/Integer.java&#10;Threadpoole&#9;FILE&#9;file:///Users/hb/Documents/study/JDK-1/src/java/util/concurrent/ThreadPoolExecutor.java&#10;ReentrantReadWriteLock&#9;FILE&#9;file:///Users/hb/Documents/study/JDK-1/src/java/util/concurrent/locks/ReentrantReadWriteLock.java" />
+    <property name="SearchEverywhereHistoryKey" value="Bits&#9;FILE&#9;file:///Users/hb/Documents/study/source_code/JDK-1/src/java/nio/Bits.java&#10;DirectByteBuffer&#9;FILE&#9;file:///Users/hb/Documents/study/source_code/JDK-1/src/java/nio/DirectByteBuffer.java&#10;ThreadPoolExecutor&#9;FILE&#9;file:///Users/hb/Documents/study/source_code/JDK-1/src/java/util/concurrent/ThreadPoolExecutor.java&#10;concurr&#9;FILE&#9;file:///Users/hb/Documents/study/source_code/JDK-1/src/java/util/concurrent/ConcurrentHashMap.java&#10;Hash&#9;FILE&#9;file:///Users/hb/Documents/study/source_code/JDK-1/src/java/util/HashMap.java&#10;Tree&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/src.zip!/java/util/TreeMap.java&#10;TreeMap&#9;PSI&#9;JAVA://java.util.TreeMap&#10;AbstractList&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/src.zip!/java/util/AbstractList.java&#10;ArrayList&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/src.zip!/java/util/ArrayList.java&#10;HashM&#9;FILE&#9;file:///Users/hb/Documents/study/JDK-1/src/java/util/HashMap.java&#10;abs&#9;FILE&#9;file:///Users/hb/Documents/study/JDK-1/src/java/util/concurrent/locks/AbstractQueuedSynchronizer.java&#10;HashMap&#9;FILE&#9;file:///Users/hb/Documents/study/JDK-1/src/java/util/HashMap.java&#10;Hashmap&#9;PSI&#9;JAVA://java.util.HashMap&#10;LinkedList&#9;PSI&#9;JAVA://java.util.LinkedList&#10;Worker&#9;PSI&#9;JAVA://java.util.concurrent.ThreadPoolExecutor.Worker&#10;Integer&#9;FILE&#9;file:///Users/hb/Documents/study/JDK-1/src/java/lang/Integer.java&#10;Threadpoole&#9;FILE&#9;file:///Users/hb/Documents/study/JDK-1/src/java/util/concurrent/ThreadPoolExecutor.java&#10;ReentrantReadWriteLock&#9;FILE&#9;file:///Users/hb/Documents/study/JDK-1/src/java/util/concurrent/locks/ReentrantReadWriteLock.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -306,7 +388,8 @@
       <workItem from="1551160943396" duration="2278000" />
       <workItem from="1551188780134" duration="12000" />
       <workItem from="1551527140922" duration="9515000" />
-      <workItem from="1551790173111" duration="6018000" />
+      <workItem from="1551790173111" duration="16341000" />
+      <workItem from="1552468021980" duration="2206000" />
     </task>
     <task id="LOCAL-00001" summary="学习jdk添加中文注释-countdownlatch/ReentrantReadWriteLock/ReentrantLock/AQS">
       <created>1526548969712</created>
@@ -455,11 +538,18 @@
       <option name="project" value="LOCAL" />
       <updated>1551793286841</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="学习jdk添加中文注释-countdownlatch/ReentrantReadWriteLock/ReentrantLock/AQS">
+      <created>1551796327001</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1551796327001</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86461000" />
+    <option name="totallyTimeSpent" value="98990000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="832" extended-state="6" />
@@ -478,7 +568,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32880434" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.16523606" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16738197" />
       <window_info anchor="bottom" id="Tail" order="7" />
       <window_info anchor="right" id="Database" order="3" weight="0.3297568" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -497,32 +587,32 @@
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.5414966" />
       <window_info anchor="bottom" id="Tail" order="7" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.24964234" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32909605" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="bottom" id="Messages" order="12" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16523606" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24964234" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TODO" order="6" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="UI Designer" order="4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32909605" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" id="Database" order="6" weight="0.3297568" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32880434" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="11" weight="0.5414966" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="Capture Tool" order="5" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Messages" order="12" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" id="Database" order="6" weight="0.3297568" />
       <window_info anchor="right" id="Maven Projects" order="8" weight="0.3297568" />
       <window_info id="Favorites" order="6" side_tool="true" />
     </layout-to-restore>
@@ -570,20 +660,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/java/util/HashMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6060">
-          <caret line="404" selection-start-line="404" selection-end-line="404" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/util/Arrays.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41505">
-          <caret line="2820" column="13" lean-forward="true" selection-start-line="2820" selection-start-column="13" selection-end-line="2820" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6585">
@@ -915,15 +991,82 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/ConcurrentHashMap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
+        <state relative-caret-position="36960">
           <caret line="2556" column="8" selection-start-line="2556" selection-start-column="8" selection-end-line="2556" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/util/concurrent/ThreadPoolExecutor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="1437" column="72" selection-start-line="1437" selection-start-column="72" selection-end-line="1437" selection-end-column="72" />
+        <state relative-caret-position="287">
+          <caret line="1442" column="44" lean-forward="true" selection-start-line="1442" selection-start-column="44" selection-end-line="1442" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/nio/Bits.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#23852#0" expanded="true" />
+            <element signature="e#19112#19113#0" expanded="true" />
+            <element signature="e#19183#19184#0" expanded="true" />
+            <element signature="e#19266#19267#0" expanded="true" />
+            <element signature="e#19339#19340#0" expanded="true" />
+            <element signature="e#19430#19431#0" expanded="true" />
+            <element signature="e#19511#19512#0" expanded="true" />
+            <element signature="e#19599#19600#0" expanded="true" />
+            <element signature="e#19681#19682#0" expanded="true" />
+            <element signature="e#19994#19995#0" expanded="true" />
+            <element signature="e#20048#20049#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/nio/DirectByteBuffer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="132" column="22" lean-forward="true" selection-start-line="132" selection-start-column="22" selection-end-line="132" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#27539#0" expanded="true" />
+            <element signature="e#5569#5570#0" expanded="true" />
+            <element signature="e#5599#5600#0" expanded="true" />
+            <element signature="e#5629#5630#0" expanded="true" />
+            <element signature="e#5670#5671#0" expanded="true" />
+            <element signature="e#5695#5696#0" expanded="true" />
+            <element signature="e#5756#5757#0" expanded="true" />
+            <element signature="e#5786#5787#0" expanded="true" />
+            <element signature="e#5846#5847#0" expanded="true" />
+            <element signature="e#9010#9011#0" expanded="true" />
+            <element signature="e#9037#9038#0" expanded="true" />
+            <element signature="e#9072#9073#0" expanded="true" />
+            <element signature="e#9100#9101#0" expanded="true" />
+            <element signature="e#9187#9188#0" expanded="true" />
+            <element signature="e#9281#9282#0" expanded="true" />
+            <element signature="e#9648#9649#0" expanded="true" />
+            <element signature="e#9706#9707#0" expanded="true" />
+            <element signature="e#9740#9741#0" expanded="true" />
+            <element signature="e#9799#9800#0" expanded="true" />
+            <element signature="e#12680#12681#0" expanded="true" />
+            <element signature="e#12739#12740#0" expanded="true" />
+            <element signature="e#12775#12776#0" expanded="true" />
+            <element signature="e#12835#12836#0" expanded="true" />
+            <element signature="e#15723#15724#0" expanded="true" />
+            <element signature="e#15780#15781#0" expanded="true" />
+            <element signature="e#15812#15813#0" expanded="true" />
+            <element signature="e#15870#15871#0" expanded="true" />
+            <element signature="e#18723#18724#0" expanded="true" />
+            <element signature="e#18781#18782#0" expanded="true" />
+            <element signature="e#18815#18816#0" expanded="true" />
+            <element signature="e#18874#18875#0" expanded="true" />
+            <element signature="e#21771#21772#0" expanded="true" />
+            <element signature="e#21830#21831#0" expanded="true" />
+            <element signature="e#21866#21867#0" expanded="true" />
+            <element signature="e#21926#21927#0" expanded="true" />
+            <element signature="e#24873#24874#0" expanded="true" />
+            <element signature="e#24933#24934#0" expanded="true" />
+            <element signature="e#24971#24972#0" expanded="true" />
+            <element signature="e#25032#25033#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
