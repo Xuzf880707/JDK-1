@@ -634,6 +634,7 @@ class Bits {                            // package-private
      * 查询申请空间
      * @param size 分配内存大小
      * @param cap 实际内存大小
+     *            如果有剩余内存可用，占坑。没有的话，通过 System.gc 来触发 FullGC，GC 完剩余内存还不够就会抛出异常 OutOfMemoryError。
      */
     static void reserveMemory(long size, int cap) {
         synchronized (Bits.class) {//用一个全局锁
@@ -651,7 +652,7 @@ class Bits {                            // package-private
                 return;
             }
         }
-        //触发一次System.gc
+        //没有的话，通过 System.gc 来触发 FullGC,触发一次System.gc
         System.gc();
         try {
             Thread.sleep(100);
@@ -660,6 +661,7 @@ class Bits {                            // package-private
             Thread.currentThread().interrupt();
         }
         synchronized (Bits.class) {
+            //GC 完剩余内存还不够就会抛出异常 OutOfMemoryError。
             if (totalCapacity + cap > maxMemory)
                 throw new OutOfMemoryError("Direct buffer memory");
             reservedMemory += size;
